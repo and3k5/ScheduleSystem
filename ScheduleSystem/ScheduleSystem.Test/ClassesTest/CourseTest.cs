@@ -9,7 +9,11 @@ namespace ScheduleSystem.Test.ClassesTest
         [TestMethod]
         public void CheckIfStudensAreAddedToCourse()
         {
+            Course course = new Course();
+            Student student = new Student();
+            student.CPR = "010101-0101";
             
+            course.Students.Add(student);
         }
     }
 }

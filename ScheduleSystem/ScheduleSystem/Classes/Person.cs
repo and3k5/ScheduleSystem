@@ -11,9 +11,9 @@ using System.Text;
 
 public class Person 
 {
-	string Email { get;set; }
+	public string Email { get;set; }
 
-	string Name { get;set; }
+	public string Name { get;set; }
 
 }
 
