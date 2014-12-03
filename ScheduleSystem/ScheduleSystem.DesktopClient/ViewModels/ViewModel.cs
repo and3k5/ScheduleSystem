@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ScheduleSystem.DesktopClient.ViewModels
 {
-    class ViewModel : IDataErrorInfo, INotifyPropertyChanged
+    public class ViewModel : IDataErrorInfo, INotifyPropertyChanged
     {
         private static bool StringCheck(string txt)
         {
