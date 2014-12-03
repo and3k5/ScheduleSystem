@@ -9,11 +9,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public interface Person 
+public class Teacher : Person
 {
-	string Email { get;set; }
-
-	string Name { get;set; }
+	public virtual string Skills
+	{
+		get;
+		set;
+	}
 
 }
 

@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Student : Person, Person
+public class Student : Person
 {
 	public virtual string CPR
 	{
