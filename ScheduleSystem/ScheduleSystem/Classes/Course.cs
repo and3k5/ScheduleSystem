@@ -41,18 +41,5 @@ public class Course
 		get;
 		set;
 	}
-
-	public virtual IEnumerable<Lecture> Lecture
-	{
-		get;
-		set;
-	}
-
-	public virtual IEnumerable<Student> Student
-	{
-		get;
-		set;
-	}
-
 }
 

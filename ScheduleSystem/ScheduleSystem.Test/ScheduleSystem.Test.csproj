@@ -57,6 +57,16 @@
     <Compile Include="ClassesTest\TeacherTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ScheduleSystem.Data\ScheduleSystem.Data.csproj">
+      <Project>{b146c8a8-0279-4dfb-bdb7-4c18a853aae0}</Project>
+      <Name>ScheduleSystem.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ScheduleSystem\ScheduleSystem.csproj">
+      <Project>{cfdf512a-878f-43b6-9ac2-bf8243717735}</Project>
+      <Name>ScheduleSystem</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

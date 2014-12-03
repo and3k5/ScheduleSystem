@@ -7,8 +7,9 @@ namespace ScheduleSystem.Test.ClassesTest
     public class CourseTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void CheckIfStudensAreAddedToCourse()
         {
+            
         }
     }
 }

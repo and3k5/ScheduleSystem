@@ -35,12 +35,5 @@ public class Lecture
 		get;
 		set;
 	}
-
-	public virtual IEnumerable<Teacher> Teacher
-	{
-		get;
-		set;
-	}
-
 }
 
