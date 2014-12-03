@@ -12,6 +12,20 @@ using System.Text;
 
 public class Course
 {
+    private void Init()
+    {
+        Lectures = new Collection<Lecture>();
+        Students = new Collection<Student>();
+    }
+    public Course()
+    {
+        Init();
+    }
+    public Course(string name)
+    {
+        Init();
+        Name = name;
+    }
 	public virtual Collection<Lecture> Lectures
 	{
 		get;
