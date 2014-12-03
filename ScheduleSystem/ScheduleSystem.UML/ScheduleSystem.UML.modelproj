@@ -29,6 +29,13 @@
       <SubType>Content</SubType>
       <DependentUpon>ScheduleSystem.classdiagram</DependentUpon>
     </Content>
+    <Content Include="ScheduleSystem.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ScheduleSystem.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ScheduleSystem.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="ScheduleSystem.usecasediagram">
       <SubType>Content</SubType>
     </Content>

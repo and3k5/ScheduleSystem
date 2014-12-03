@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="ec44bfd4-0d3a-4582-b8a5-11620d6e7af0"
   name="ScheduleSystem.UML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -1839,7 +1839,8 @@
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false" />
+                  isComposite="false"
+                  isNavigableOwned="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -1878,7 +1879,8 @@
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false" />
+                  isComposite="false"
+                  isNavigableOwned="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -1917,7 +1919,8 @@
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false" />
+                  isComposite="false"
+                  isNavigableOwned="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -1956,7 +1959,8 @@
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false" />
+                  isComposite="false"
+                  isNavigableOwned="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -1975,7 +1979,17 @@
         Id="bd1e97fd-e0e5-43e0-877a-2415ae54fec4"
         name="Create lecture"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="bd1de32d-57f7-4c67-baa8-d9b8f517b10d">
+            <useCaseMoniker
+              Id="18f6a7cc-d490-46bb-8331-1de1d6690de6"
+              LastKnownName="Manage lecture"
+              LastKnownLocation="ScheduleSystem.UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -2003,7 +2017,17 @@
         Id="4985f2a7-b789-4659-b06f-b6e117e9e7f9"
         name="Delete lecture"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="ab5bcefa-cdce-4779-8d29-09073e22c634">
+            <useCaseMoniker
+              Id="18f6a7cc-d490-46bb-8331-1de1d6690de6"
+              LastKnownName="Manage lecture"
+              LastKnownLocation="ScheduleSystem.UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -2045,14 +2069,34 @@
         Id="371e7a3d-ab79-401d-b4ce-1c667e74e484"
         name="Delete course"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="bea0d748-0c27-4331-81aa-7a131f4b30d5">
+            <useCaseMoniker
+              Id="fa57228b-3f11-4773-92ee-b3a53f880c1a"
+              LastKnownName="Manage course"
+              LastKnownLocation="ScheduleSystem.UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="b39f06f9-d8c4-489f-bb0f-05f561a363d1"
         name="Create course"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="57dc644c-5cbe-439e-94a7-7b7f1f06ad9f">
+            <useCaseMoniker
+              Id="fa57228b-3f11-4773-92ee-b3a53f880c1a"
+              LastKnownName="Manage course"
+              LastKnownLocation="ScheduleSystem.UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -2066,14 +2110,34 @@
         Id="d4e6f0a5-154d-4ccd-a6b7-718c0df015e8"
         name="Delete teacher"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="eac6a575-4b93-489c-b8b8-e3a16768e4d6">
+            <useCaseMoniker
+              Id="6db6637f-a5a4-4783-97bf-37eebe312ea0"
+              LastKnownName="Manage teacher"
+              LastKnownLocation="ScheduleSystem.UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="352cd2e2-b9ad-4b91-86ea-e4604ece5885"
         name="Create teacher"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="11ddc2de-e72e-438e-b09a-9fe3bbeae990">
+            <useCaseMoniker
+              Id="6db6637f-a5a4-4783-97bf-37eebe312ea0"
+              LastKnownName="Manage teacher"
+              LastKnownLocation="ScheduleSystem.UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -2128,7 +2192,50 @@
         Id="e6dcf4ff-fb23-4986-8625-f5f80d6debfe"
         name="View assigned lectures"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="98f6709b-4ed4-4459-b9ef-a5544415ef4e"
+            isDerived="false"
+            sourceEndRoleName="View assigned lectures"
+            targetEndRoleName="Teacher"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="485557bf-db60-41e3-923d-d5ec1e08129c"
+              LastKnownName="Teacher"
+              LastKnownLocation="ScheduleSystem.UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="36eb6fbe-3a50-4198-92bf-d1810be187ac"
+                  name="View assigned lectures"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="233e4377-139e-4872-97f8-31590703e33c"
+                  name="Teacher"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <actor
@@ -2149,28 +2256,537 @@
         Id="8265f6a7-64e5-4eba-b662-fd10796cd99a"
         name="View full schema"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="86ed0a32-9fac-47e3-9c9e-b6f1e8446347"
+            isDerived="false"
+            sourceEndRoleName="View full schema"
+            targetEndRoleName="Teacher"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="485557bf-db60-41e3-923d-d5ec1e08129c"
+              LastKnownName="Teacher"
+              LastKnownLocation="ScheduleSystem.UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8c89b3c1-c19d-4acb-bab8-a1a02c75eb5b"
+                  name="View full schema"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ba39792b-5c74-4288-86a1-7f406c389b32"
+                  name="Teacher"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="45c928a1-a2cf-4bb1-93c3-096ecf1eeae6"
         name="Manage user information"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="ccd9a9dd-2aae-48eb-9291-b6bb8b404808"
+            isDerived="false"
+            sourceEndRoleName="Manage user information"
+            targetEndRoleName="Teacher"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="485557bf-db60-41e3-923d-d5ec1e08129c"
+              LastKnownName="Teacher"
+              LastKnownLocation="ScheduleSystem.UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="48304127-b22f-4153-8b16-f637439f0f86"
+                  name="Manage user information"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5dc35773-3c98-467d-9309-bb813afa5d07"
+                  name="Teacher"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="1dacecc3-3e40-4769-ae91-9c2aef8aa001"
         name="View course lectures"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="80b67047-50a1-43ef-aeac-85e4bd3b123c"
+            isDerived="false"
+            sourceEndRoleName="View course lectures"
+            targetEndRoleName="Teacher"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="485557bf-db60-41e3-923d-d5ec1e08129c"
+              LastKnownName="Teacher"
+              LastKnownLocation="ScheduleSystem.UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a9f1f939-2e8c-48e8-baf1-f824e314e9ec"
+                  name="View course lectures"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="70c1942f-a989-43e0-95ab-77894819c484"
+                  name="Teacher"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="c3d54614-f878-4c0d-a4b5-c09563b09acd"
         name="Edit student"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="1a9eb980-1619-4a31-bcdf-4549e621546a">
+            <useCaseMoniker
+              Id="e4d82a2a-381f-46e5-838f-4a6b353a3a10"
+              LastKnownName="Manage student"
+              LastKnownLocation="ScheduleSystem.UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="680d6eba-7a7b-4bb8-8835-77dc49dfb090"
+        name="Edit teacher"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="47d60153-c0e5-4ecd-9d3e-74eef4715df5">
+            <useCaseMoniker
+              Id="6db6637f-a5a4-4783-97bf-37eebe312ea0"
+              LastKnownName="Manage teacher"
+              LastKnownLocation="ScheduleSystem.UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f4e58faf-a87b-4f9b-80d4-85187afca2f5"
+        name="Edit course"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="f0009f0c-2c57-4b73-88a2-53b514d6233f">
+            <useCaseMoniker
+              Id="fa57228b-3f11-4773-92ee-b3a53f880c1a"
+              LastKnownName="Manage course"
+              LastKnownLocation="ScheduleSystem.UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2c174e4e-3c4f-4d87-84bd-f87866851988"
+        name="Edit lecture"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="25497412-29a0-430d-af41-a1b20c0d6eba">
+            <useCaseMoniker
+              Id="18f6a7cc-d490-46bb-8331-1de1d6690de6"
+              LastKnownName="Manage lecture"
+              LastKnownLocation="ScheduleSystem.UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="85970059-3c8a-481a-90f2-534672c57106"
+        name="ScheduleSystem"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="200fc5ea-215b-40a3-9645-045e2795c3a5"
+            name="BehaviorExecutionSpecification4">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="fa9736c4-7f08-4a44-9808-ee11be056dd1"
+                LastKnownName="Service"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="401de6de-0b06-481e-b5f9-dd7e67062e8f"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="3d43d53b-7329-4aff-9c62-3f9a500fc49e"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="fa1e74f0-9b0b-4e27-8fb4-1ada9d7fe90f"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="b088e640-3598-4c9d-9111-698d3b993aff"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="736ec7e7-f63d-47cc-8cc2-b2fc523cdf5f"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="3d43d53b-7329-4aff-9c62-3f9a500fc49e"
+            name="ExecutionOccurrenceSpecification7">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="5187f029-1d30-423c-bca7-3079903e7cd3"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ScheduleSystem.UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="fa9736c4-7f08-4a44-9808-ee11be056dd1"
+                LastKnownName="Service"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <lostFoundTarget
+            Id="e5c66ceb-2f8a-483a-9a7f-c0cd264662eb"
+            name="LostFoundTarget2" />
+          <messageOccurrenceSpecification
+            Id="fa1e74f0-9b0b-4e27-8fb4-1ada9d7fe90f"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="fa9736c4-7f08-4a44-9808-ee11be056dd1"
+                LastKnownName="Service"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="58d72b58-2fe9-4451-ac0b-1c4b28ef63eb"
+            name="BehaviorExecutionSpecification6">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="4703ae8e-028f-4005-8217-73509fddb150"
+                LastKnownName="Database"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="0e544622-9f7e-4c4c-87a6-bda1503ed3e8"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="ab473103-d867-4372-8e17-55c229aee10f"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="953b5c5f-4ee6-42ea-a7d7-237b66e2d31e"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="80ac6512-cebc-42bf-8892-3e9261db14cf"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="ab473103-d867-4372-8e17-55c229aee10f"
+            name="ExecutionOccurrenceSpecification11">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="7bd71f21-dc82-43d8-8fd0-94338c0f2a38"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ScheduleSystem.UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="4703ae8e-028f-4005-8217-73509fddb150"
+                LastKnownName="Database"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="953b5c5f-4ee6-42ea-a7d7-237b66e2d31e"
+            name="MessageOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="4703ae8e-028f-4005-8217-73509fddb150"
+                LastKnownName="Database"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b088e640-3598-4c9d-9111-698d3b993aff"
+            name="MessageOccurrenceSpecification13">
+            <covered>
+              <lifelineMoniker
+                Id="fa9736c4-7f08-4a44-9808-ee11be056dd1"
+                LastKnownName="Service"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="80ac6512-cebc-42bf-8892-3e9261db14cf"
+            name="MessageOccurrenceSpecification15">
+            <covered>
+              <lifelineMoniker
+                Id="4703ae8e-028f-4005-8217-73509fddb150"
+                LastKnownName="Database"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="736ec7e7-f63d-47cc-8cc2-b2fc523cdf5f"
+            name="MessageOccurrenceSpecification16">
+            <covered>
+              <lifelineMoniker
+                Id="fa9736c4-7f08-4a44-9808-ee11be056dd1"
+                LastKnownName="Service"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="0e544622-9f7e-4c4c-87a6-bda1503ed3e8"
+            name="ExecutionOccurrenceSpecification12">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="af879939-bc0c-49a9-94c9-e90fb3f063a9"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ScheduleSystem.UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="4703ae8e-028f-4005-8217-73509fddb150"
+                LastKnownName="Database"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="401de6de-0b06-481e-b5f9-dd7e67062e8f"
+            name="ExecutionOccurrenceSpecification8">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="3a3818be-b624-4e5b-be93-a47ea789f372"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ScheduleSystem.UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="fa9736c4-7f08-4a44-9808-ee11be056dd1"
+                LastKnownName="Service"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="fa9736c4-7f08-4a44-9808-ee11be056dd1"
+            name="Service"
+            isActor="false"
+            lifelineDisplayName="Service">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="3d43d53b-7329-4aff-9c62-3f9a500fc49e"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="401de6de-0b06-481e-b5f9-dd7e67062e8f"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="4703ae8e-028f-4005-8217-73509fddb150"
+            name="Database"
+            isActor="false"
+            lifelineDisplayName="Database">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="ab473103-d867-4372-8e17-55c229aee10f"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="0e544622-9f7e-4c4c-87a6-bda1503ed3e8"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="4180da84-c9d7-4cbb-9215-f89c5b83f5c9"
+            name="Start Application"
+            messageKind="Found"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <lostFoundTargetMoniker
+                Id="e5c66ceb-2f8a-483a-9a7f-c0cd264662eb"
+                LastKnownName="LostFoundTarget2"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="fa1e74f0-9b0b-4e27-8fb4-1ada9d7fe90f"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="06b6c134-77a1-436f-8c5c-8831f7dc525c"
+            name="Request schema data"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b088e640-3598-4c9d-9111-698d3b993aff"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="953b5c5f-4ee6-42ea-a7d7-237b66e2d31e"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="bf7aed80-69bb-4c51-b5d1-8e9f0b4c5c11"
+            name="&lt;&lt;return schema data&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="80ac6512-cebc-42bf-8892-3e9261db14cf"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="736ec7e7-f63d-47cc-8cc2-b2fc523cdf5f"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="ScheduleSystem.UML.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="5187f029-1d30-423c-bca7-3079903e7cd3"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="3a3818be-b624-4e5b-be93-a47ea789f372"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="7bd71f21-dc82-43d8-8fd0-94338c0f2a38"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="af879939-bc0c-49a9-94c9-e90fb3f063a9"
+        name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

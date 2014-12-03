@@ -112,7 +112,7 @@
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="77c706c7-6b4e-4076-80ba-8c1e7f5b3a1d" name="Manage lecture" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="77c706c7-6b4e-4076-80ba-8c1e7f5b3a1d" name="Manage lecture" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                   <elementDefinition Id="d0023987-001d-4837-b05e-3073b5b23456" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -128,7 +128,7 @@
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="be4c0572-239a-4be1-bfac-52edef390633" name="Manage course" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="be4c0572-239a-4be1-bfac-52edef390633" name="Manage course" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                   <elementDefinition Id="c01c826c-03de-4b06-8511-525e2fce959c" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -144,7 +144,7 @@
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="d76e4808-d934-4cc5-a3f2-d0c61c72a25d" name="Manage teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="d76e4808-d934-4cc5-a3f2-d0c61c72a25d" name="Manage teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                   <elementDefinition Id="43e5b971-611e-4240-9c50-68315bc1d01b" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -160,7 +160,7 @@
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="d913aab8-1cce-442f-9bf8-323edc718ea3" name="Manage student" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="d913aab8-1cce-442f-9bf8-323edc718ea3" name="Manage student" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                   <elementDefinition Id="731d698e-391b-4d7a-b6e4-302db0a96f4e" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -173,6 +173,12 @@
     <useCaseModelRootHasTypes>
       <useCase Id="ccfbaf1a-5160-4f28-ad60-92d5192250d3" name="Create lecture" isAbstract="false" isLeaf="false">
         <elementDefinition Id="bd1e97fd-e0e5-43e0-877a-2415ae54fec4" />
+        <extendedCases>
+          <extend Id="0c30b79a-26b1-4d0a-b379-ee90ea58abbf">
+            <useCaseMoniker Id="f21dabfe-2ee8-455a-9031-30fc05041c8c" LastKnownName="Manage lecture" />
+            <elementDefinition Id="bd1de32d-57f7-4c67-baa8-d9b8f517b10d" />
+          </extend>
+        </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -183,6 +189,12 @@
     <useCaseModelRootHasTypes>
       <useCase Id="9c62c58b-2e96-4619-91a6-5a7c5c1db7b7" name="Delete lecture" isAbstract="false" isLeaf="false">
         <elementDefinition Id="4985f2a7-b789-4659-b06f-b6e117e9e7f9" />
+        <extendedCases>
+          <extend Id="dec7af8e-c5a7-4cd9-9a46-29e2872ffd16">
+            <useCaseMoniker Id="f21dabfe-2ee8-455a-9031-30fc05041c8c" LastKnownName="Manage lecture" />
+            <elementDefinition Id="ab5bcefa-cdce-4779-8d29-09073e22c634" />
+          </extend>
+        </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -193,11 +205,23 @@
     <useCaseModelRootHasTypes>
       <useCase Id="9e113027-33b7-4c91-a3db-c30a03fd4672" name="Delete course" isAbstract="false" isLeaf="false">
         <elementDefinition Id="371e7a3d-ab79-401d-b4ce-1c667e74e484" />
+        <extendedCases>
+          <extend Id="c0bfeb64-a372-4f88-84ab-f0f490c7a51b">
+            <useCaseMoniker Id="44fbcae9-3692-4069-be56-532bb9eee339" LastKnownName="Manage course" />
+            <elementDefinition Id="bea0d748-0c27-4331-81aa-7a131f4b30d5" />
+          </extend>
+        </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="717da351-0578-4856-9807-f1013134a01d" name="Create course" isAbstract="false" isLeaf="false">
         <elementDefinition Id="b39f06f9-d8c4-489f-bb0f-05f561a363d1" />
+        <extendedCases>
+          <extend Id="bac3c18b-b667-4542-94fa-6a6991b971b3">
+            <useCaseMoniker Id="44fbcae9-3692-4069-be56-532bb9eee339" LastKnownName="Manage course" />
+            <elementDefinition Id="57dc644c-5cbe-439e-94a7-7b7f1f06ad9f" />
+          </extend>
+        </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -208,11 +232,23 @@
     <useCaseModelRootHasTypes>
       <useCase Id="9d63679a-45b5-4b50-aace-6a8699424422" name="Delete teacher" isAbstract="false" isLeaf="false">
         <elementDefinition Id="d4e6f0a5-154d-4ccd-a6b7-718c0df015e8" />
+        <extendedCases>
+          <extend Id="93a741da-db7c-4429-a9fd-6e6375ce49c2">
+            <useCaseMoniker Id="49032a56-0b60-41cf-bab1-0df0ff8b502c" LastKnownName="Manage teacher" />
+            <elementDefinition Id="eac6a575-4b93-489c-b8b8-e3a16768e4d6" />
+          </extend>
+        </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="ec434aae-c6e0-4777-a6eb-0f7dd8723135" name="Create teacher" isAbstract="false" isLeaf="false">
         <elementDefinition Id="352cd2e2-b9ad-4b91-86ea-e4604ece5885" />
+        <extendedCases>
+          <extend Id="bb7907fd-ae05-4a7b-adfd-7fcc1319ff0a">
+            <useCaseMoniker Id="49032a56-0b60-41cf-bab1-0df0ff8b502c" LastKnownName="Manage teacher" />
+            <elementDefinition Id="11ddc2de-e72e-438e-b09a-9fe3bbeae990" />
+          </extend>
+        </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -245,26 +281,137 @@
     <useCaseModelRootHasTypes>
       <useCase Id="79222a7c-b0a7-40ec-bb2d-12870ed43062" name="View assigned lectures" isAbstract="false" isLeaf="false">
         <elementDefinition Id="e6dcf4ff-fb23-4986-8625-f5f80d6debfe" />
+        <targetEnds>
+          <association Id="b3235eee-48ba-4741-a5e9-f393c8de1828" isDerived="false" sourceEndRoleName="View assigned lectures" targetEndRoleName="Teacher" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="15b7b85f-9e39-48fb-96b2-a470d40143fd" LastKnownName="Teacher" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c94776c1-798d-430c-be07-87fc8c2b5e9a" name="View assigned lectures" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="36eb6fbe-3a50-4198-92bf-d1810be187ac" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="49bfea6e-4d65-45c6-80de-d4dd879263c4" name="Teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="233e4377-139e-4872-97f8-31590703e33c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="98f6709b-4ed4-4459-b9ef-a5544415ef4e" />
+          </association>
+        </targetEnds>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="a43ac857-7b80-4440-8df2-f352e441bd33" name="View full schema" isAbstract="false" isLeaf="false">
         <elementDefinition Id="8265f6a7-64e5-4eba-b662-fd10796cd99a" />
+        <targetEnds>
+          <association Id="eb0a7cb8-fa44-4fa4-9f8c-408adf8b66c8" isDerived="false" sourceEndRoleName="View full schema" targetEndRoleName="Teacher" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="15b7b85f-9e39-48fb-96b2-a470d40143fd" LastKnownName="Teacher" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0158e4bc-7bee-4775-ac47-f9280c9e0cc5" name="View full schema" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8c89b3c1-c19d-4acb-bab8-a1a02c75eb5b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c26ec135-e889-4896-b601-f8f3cc99e062" name="Teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ba39792b-5c74-4288-86a1-7f406c389b32" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="86ed0a32-9fac-47e3-9c9e-b6f1e8446347" />
+          </association>
+        </targetEnds>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="11256ae1-a1ae-47a4-94f6-6ffc9eefb5c0" name="Manage user information" isAbstract="false" isLeaf="false">
         <elementDefinition Id="45c928a1-a2cf-4bb1-93c3-096ecf1eeae6" />
+        <targetEnds>
+          <association Id="88f47704-2ee2-44fa-b46b-5e11a6624741" isDerived="false" sourceEndRoleName="Manage user information" targetEndRoleName="Teacher" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="15b7b85f-9e39-48fb-96b2-a470d40143fd" LastKnownName="Teacher" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="be068e35-7bf9-4b99-8dbc-fb8a5dd82e1e" name="Manage user information" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="48304127-b22f-4153-8b16-f637439f0f86" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d7fb8368-6961-41d3-bb7f-8501b8d20fe5" name="Teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5dc35773-3c98-467d-9309-bb813afa5d07" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ccd9a9dd-2aae-48eb-9291-b6bb8b404808" />
+          </association>
+        </targetEnds>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="3d22e43a-71e5-477a-bfd2-aa9177aa0733" name="View course lectures" isAbstract="false" isLeaf="false">
         <elementDefinition Id="1dacecc3-3e40-4769-ae91-9c2aef8aa001" />
+        <targetEnds>
+          <association Id="87ef6cf1-03d3-4a56-8df8-c5f6f959b2e3" isDerived="false" sourceEndRoleName="View course lectures" targetEndRoleName="Teacher" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="15b7b85f-9e39-48fb-96b2-a470d40143fd" LastKnownName="Teacher" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8ff4769b-975a-4107-947c-c6f3a483001c" name="View course lectures" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a9f1f939-2e8c-48e8-baf1-f824e314e9ec" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aadc1928-a0dd-4f82-a43c-3d9139cdaa76" name="Teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="70c1942f-a989-43e0-95ab-77894819c484" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="80b67047-50a1-43ef-aeac-85e4bd3b123c" />
+          </association>
+        </targetEnds>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="ff3f56c3-a137-498d-abe6-f621add2174c" name="Edit student" isAbstract="false" isLeaf="false">
         <elementDefinition Id="c3d54614-f878-4c0d-a4b5-c09563b09acd" />
+        <extendedCases>
+          <extend Id="3bf14110-4157-4b46-bd3a-1cbd2aec84f6">
+            <useCaseMoniker Id="aaf7a0b7-3b50-468b-8205-f58a8b3b51a7" LastKnownName="Manage student" />
+            <elementDefinition Id="1a9eb980-1619-4a31-bcdf-4549e621546a" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4eb215a7-34e5-4f02-9a5a-a1d024ee8b8a" name="Edit teacher" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="680d6eba-7a7b-4bb8-8835-77dc49dfb090" />
+        <extendedCases>
+          <extend Id="946475cb-6687-44c4-bb66-e3f16568c2e0">
+            <useCaseMoniker Id="49032a56-0b60-41cf-bab1-0df0ff8b502c" LastKnownName="Manage teacher" />
+            <elementDefinition Id="47d60153-c0e5-4ecd-9d3e-74eef4715df5" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4fc44540-5428-48af-9ee0-47ca3cb16f30" name="Edit course" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f4e58faf-a87b-4f9b-80d4-85187afca2f5" />
+        <extendedCases>
+          <extend Id="8944c90e-0a1b-4ab6-84c9-c311a9b7df77">
+            <useCaseMoniker Id="44fbcae9-3692-4069-be56-532bb9eee339" LastKnownName="Manage course" />
+            <elementDefinition Id="f0009f0c-2c57-4b73-88a2-53b514d6233f" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="50385381-7b75-40c8-9e98-db0f8680e097" name="Edit lecture" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2c174e4e-3c4f-4d87-84bd-f87866851988" />
+        <extendedCases>
+          <extend Id="61b965e2-b59b-4506-95fc-3e5598352d87">
+            <useCaseMoniker Id="f21dabfe-2ee8-455a-9031-30fc05041c8c" LastKnownName="Manage lecture" />
+            <elementDefinition Id="25497412-29a0-430d-af41-a1b20c0d6eba" />
+          </extend>
+        </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
   </packagedElements>
