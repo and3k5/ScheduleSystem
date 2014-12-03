@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="fb09da0c-49f3-41c2-933b-f82cba7cb35a" name="ScheduleSystem" linkedPackageId="09dade33-200e-454a-9fe6-8d8c489eba8c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="708fc37f-d891-4ce0-b2b6-aa48775a8fe8" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="4d6b1a9b-c8fe-4f46-a914-59e4592f98f3" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="e0902e80-b035-475a-abd7-adde43d457dc">
+          <propertyInstance Id="6e9368f4-e06c-47aa-8fbf-24802c435d2b" name="BaseName">
+            <elementDefinition Id="8c30cff7-f836-4f3d-aecd-dce9f2d5e3f3" />
+          </propertyInstance>
+          <elementDefinition Id="9816feb6-0a46-46d2-9a69-d997fb2e13bf" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="63eb2f76-da0f-48a0-932d-176a8b02dc60">
+          <propertyInstance Id="3b96663f-5876-4921-9606-7a1d2bdaf1cb" name="ClrAttributes">
+            <elementDefinition Id="f1c40951-3a6c-4975-a595-7d6edb19b6bc" />
+          </propertyInstance>
+          <elementDefinition Id="4cae9793-ba66-4c16-b667-6688a6a6f50c" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="187cec34-c248-48c4-9ebf-75228fe221b0">
+          <propertyInstance Id="815415ae-c2ca-45ee-8ce2-597427243b7b" name="Usings">
+            <elementDefinition Id="57f8a5fb-0e7a-48e2-abf1-b5003b4ab4f5" />
+          </propertyInstance>
+          <elementDefinition Id="f641dc6e-0be6-40a7-8a6f-a6555bec1521" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="395aeb3b-729e-49cc-bc48-16b6f3a6261e" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="b9beadac-97c1-46d0-a240-9f169fbbe839" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="69fb4c8d-4a1c-4fa2-82b9-c6e4ce691c93">
+          <propertyInstance Id="94fa664c-02c9-4a7e-8bc2-6c5a46eccd4d" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="d8e213a0-32db-4b0e-9200-c235267a9833" />
+          </propertyInstance>
+          <elementDefinition Id="2af2c6a1-08a5-42ba-8694-4c868d298a71" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="da520b90-4ae0-4da1-bbee-73cbbffae6c5">
+          <propertyInstance Id="9269f12f-74eb-40c9-9cfa-89fec4e5ae3a" name="TemplateFilePath" value="ClassTemplate=D:\PROGRAMMER (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=D:\PROGRAMMER (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=D:\PROGRAMMER (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=D:\PROGRAMMER (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="aac3d444-3c1a-46dc-b7ee-6fce45d88b20" />
+          </propertyInstance>
+          <elementDefinition Id="3f3a5fad-7d8c-4924-b8e0-99375ba643bd" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="ce345b11-57d3-4d4b-9152-839106dc742f">
+          <propertyInstance Id="fc1dd68e-87de-458d-86d9-fc1a190ed433" name="ProjectPath" value="ClassTemplate=..\ScheduleSystem.UMLLib\ScheduleSystem.UMLLib.csproj|EnumTemplate=..\ScheduleSystem.UMLLib\ScheduleSystem.UMLLib.csproj|InterfaceTemplate=..\ScheduleSystem.UMLLib\ScheduleSystem.UMLLib.csproj|StructTemplate=..\ScheduleSystem.UMLLib\ScheduleSystem.UMLLib.csproj">
+            <elementDefinition Id="623f4d28-a54f-473b-936d-3df066f0cd72" />
+          </propertyInstance>
+          <elementDefinition Id="908c9d70-b759-42cd-a883-375c1b5b13a4" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="ea6326f7-e6fd-41dc-a6bf-202fb6ad7752">
+          <propertyInstance Id="4932d988-447c-4c27-aa80-ae11bbdf3cb7" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="039464e0-ef8c-4904-bd54-7816b2e829eb" />
+          </propertyInstance>
+          <elementDefinition Id="da4d1465-de3f-4107-8e41-5321af289167" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="0a5b66eb-e772-40bd-b53c-0b583729bc48">
+          <propertyInstance Id="f38367c0-5e70-4b94-a9b4-2d5e1ffb307e" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="bd1faa8f-f8aa-4820-9f4e-3be704afde33" />
+          </propertyInstance>
+          <elementDefinition Id="c7e27167-7205-40c6-ad54-80c3d2344275" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="d80950b4-9bc2-4204-9a26-806f20cce501">
+          <propertyInstance Id="3844b2ea-d579-4ff9-842e-7b4164a40d8b" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="d22b1026-6806-4464-91ac-db74734bc2cd" />
+          </propertyInstance>
+          <elementDefinition Id="fdb07946-56a2-4cb2-b469-61fecc8805d4" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="1d61671b-efec-472b-bfd9-abda87dd335c">
+          <propertyInstance Id="3ee6a9d4-4948-4406-92af-a5c3b42c2288" name="Parameters">
+            <elementDefinition Id="250309e2-b2d8-4cc2-9bbd-cf1761796137" />
+          </propertyInstance>
+          <elementDefinition Id="5f7fb40a-7524-4bae-ac84-64278fbc215a" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="a5005ea1-874e-4f0a-be72-109e794e1cc3">
+      <profileInstance Id="1c07a87a-191c-4f15-a4fd-77095ce5ee0d" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="e60b2ff8-b616-446a-9418-9147facd87f3">
+      <profileInstance Id="4322ba96-d328-44db-afa4-b79d1c7ab3f2" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="eb0e3cc9-b748-4097-9815-97cc450530b6">
+      <profileInstance Id="43565400-2199-4a6c-9b68-d372b2da9ba2" name="CSharpProfile">
+        <elementDefinition Id="a3991660-248f-4e36-9d38-3652eaf1ae1c" />
+      </profileInstance>
+      <elementDefinition Id="db2ace3d-a232-4966-a33f-3de107e7a504" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="3e484772-f72b-465d-9a96-e27c29593cfc">
+      <profileInstance Id="73786304-0430-4a85-a409-be98199eee62" name="TextTemplateBindings">
+        <elementDefinition Id="9dc964a5-b6d6-4328-84c2-70b785f7ae12" />
+      </profileInstance>
+      <elementDefinition Id="f0105f45-03c7-4691-b87f-e7d912914a3e" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="15b7b85f-9e39-48fb-96b2-a470d40143fd" name="Teacher" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="485557bf-db60-41e3-923d-d5ec1e08129c" />
+        <targetEnds>
+          <association Id="e6060b5b-daae-4ce5-b970-a0fe76a63188" isDerived="false" sourceEndRoleName="Teacher" targetEndRoleName="Manage lecture" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f21dabfe-2ee8-455a-9031-30fc05041c8c" LastKnownName="Manage lecture" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d0b869d0-b34e-414a-8e26-396162122e7d" name="Teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="24fa599c-7510-43c6-a339-54e0194888c3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="77c706c7-6b4e-4076-80ba-8c1e7f5b3a1d" name="Manage lecture" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d0023987-001d-4837-b05e-3073b5b23456" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f1719a79-fa4c-4ccb-b675-98c94020d2de" />
+          </association>
+          <association Id="7b914745-d59d-44ff-923f-a5dc8b87e21a" isDerived="false" sourceEndRoleName="Teacher" targetEndRoleName="Manage course" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="44fbcae9-3692-4069-be56-532bb9eee339" LastKnownName="Manage course" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="93cc985a-92ba-41a0-ab8c-bcefb67d860f" name="Teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="35de27c2-6853-4c6d-a12e-d4fb62833d11" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="be4c0572-239a-4be1-bfac-52edef390633" name="Manage course" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c01c826c-03de-4b06-8511-525e2fce959c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7afcc379-6838-4b82-be6f-e5fc946583c9" />
+          </association>
+          <association Id="c705b469-cd47-4f34-9852-a25258aa3651" isDerived="false" sourceEndRoleName="Teacher" targetEndRoleName="Manage teacher" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="49032a56-0b60-41cf-bab1-0df0ff8b502c" LastKnownName="Manage teacher" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d2e003d1-b60a-4703-b182-00b12f4b7d9c" name="Teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="febaf104-ff5e-4edd-b481-952483d6b612" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d76e4808-d934-4cc5-a3f2-d0c61c72a25d" name="Manage teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="43e5b971-611e-4240-9c50-68315bc1d01b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e6e0d014-7367-4331-86ae-ded137c991a4" />
+          </association>
+          <association Id="799d2174-c24e-49b6-91a1-cac52736feb0" isDerived="false" sourceEndRoleName="Teacher" targetEndRoleName="Manage student" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="aaf7a0b7-3b50-468b-8205-f58a8b3b51a7" LastKnownName="Manage student" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9e1ceb14-5f6f-4e26-aa02-456640818186" name="Teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e7e1c805-639a-4f2c-82bb-09bc4954b178" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d913aab8-1cce-442f-9bf8-323edc718ea3" name="Manage student" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="731d698e-391b-4d7a-b6e4-302db0a96f4e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="367b5e83-774d-4325-b313-a1cd51b75f00" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ccfbaf1a-5160-4f28-ad60-92d5192250d3" name="Create lecture" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bd1e97fd-e0e5-43e0-877a-2415ae54fec4" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f21dabfe-2ee8-455a-9031-30fc05041c8c" name="Manage lecture" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="18f6a7cc-d490-46bb-8331-1de1d6690de6" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9c62c58b-2e96-4619-91a6-5a7c5c1db7b7" name="Delete lecture" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4985f2a7-b789-4659-b06f-b6e117e9e7f9" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="44fbcae9-3692-4069-be56-532bb9eee339" name="Manage course" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fa57228b-3f11-4773-92ee-b3a53f880c1a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9e113027-33b7-4c91-a3db-c30a03fd4672" name="Delete course" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="371e7a3d-ab79-401d-b4ce-1c667e74e484" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="717da351-0578-4856-9807-f1013134a01d" name="Create course" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b39f06f9-d8c4-489f-bb0f-05f561a363d1" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="49032a56-0b60-41cf-bab1-0df0ff8b502c" name="Manage teacher" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6db6637f-a5a4-4783-97bf-37eebe312ea0" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9d63679a-45b5-4b50-aace-6a8699424422" name="Delete teacher" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d4e6f0a5-154d-4ccd-a6b7-718c0df015e8" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ec434aae-c6e0-4777-a6eb-0f7dd8723135" name="Create teacher" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="352cd2e2-b9ad-4b91-86ea-e4604ece5885" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="aaf7a0b7-3b50-468b-8205-f58a8b3b51a7" name="Manage student" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e4d82a2a-381f-46e5-838f-4a6b353a3a10" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1b72f791-ccb4-4522-a909-f262ceaee671" name="Delete student" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ffa837d8-62df-461e-b3ac-67679a62d776" />
+        <extendedCases>
+          <extend Id="02841efb-4539-4a3f-aaef-e9cc71b45a77">
+            <useCaseMoniker Id="aaf7a0b7-3b50-468b-8205-f58a8b3b51a7" LastKnownName="Manage student" />
+            <elementDefinition Id="e52e83c6-739b-4502-9fa3-3961a419d5ca" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b97418c9-c4bc-450b-8411-1ce9e6d480ca" name="Create student" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1705abbe-1829-470d-a2ab-0f4a8d2e9f10" />
+        <extendedCases>
+          <extend Id="d1b1e7b2-8db4-4549-9c4d-6872340afcfa">
+            <useCaseMoniker Id="aaf7a0b7-3b50-468b-8205-f58a8b3b51a7" LastKnownName="Manage student" />
+            <elementDefinition Id="3cba64b8-e85f-4298-80b8-6a50a11979ca" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="79222a7c-b0a7-40ec-bb2d-12870ed43062" name="View assigned lectures" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e6dcf4ff-fb23-4986-8625-f5f80d6debfe" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a43ac857-7b80-4440-8df2-f352e441bd33" name="View full schema" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8265f6a7-64e5-4eba-b662-fd10796cd99a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="11256ae1-a1ae-47a4-94f6-6ffc9eefb5c0" name="Manage user information" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="45c928a1-a2cf-4bb1-93c3-096ecf1eeae6" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3d22e43a-71e5-477a-bfd2-aa9177aa0733" name="View course lectures" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1dacecc3-3e40-4769-ae91-9c2aef8aa001" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ff3f56c3-a137-498d-abe6-f621add2174c" name="Edit student" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c3d54614-f878-4c0d-a4b5-c09563b09acd" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="09dade33-200e-454a-9fe6-8d8c489eba8c" name="ScheduleSystem.UML">
+    <elementDefinition Id="ec44bfd4-0d3a-4582-b8a5-11620d6e7af0" />
+  </package>
+</useCaseModelRoot>
