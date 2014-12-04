@@ -30,7 +30,6 @@ namespace ScheduleSystem.DesktopClient
         {
             CourseDialog courseDiag = new CourseDialog();
             courseDiag.Show();
-            this.Close();
         }
     }
 }
