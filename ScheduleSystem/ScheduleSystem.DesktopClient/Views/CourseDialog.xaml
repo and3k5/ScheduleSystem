@@ -44,26 +44,28 @@
         <DatePicker Style="{StaticResource checkvalidstyle}"
                  SelectedDate="{Binding EndDate, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
         <Label>Student</Label>
-        <DataGrid x:Name="dataGrid" ItemsSource="{Binding Path=Students}" RowHeight="26" SelectionMode="Single" AutoGenerateColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Width="*" Binding="{Binding Name}"/>
-                <DataGridTemplateColumn Header="Delete" >
-                    <DataGridTemplateColumn.CellTemplate>
+        <ListView x:Name="dataGrid" ItemsSource="{Binding Path=Students}" SelectionMode="Single">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                <GridViewColumn Header="Delete" >
+                        <GridViewColumn.CellTemplate>
                         <DataTemplate>
                             <Button Content="Delete"
                                     Command="Delete"/>
                         </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Edit" >
-                <DataGridTemplateColumn.CellTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+                    <GridViewColumn Header="Edit" >
+                        <GridViewColumn.CellTemplate>
                     <DataTemplate>
-                        <Button Content="Edit"/>
+                        <Button Content="Edit" Click="Button_Click"/>
                     </DataTemplate>
-                </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-            </DataGrid.Columns>
-        </DataGrid>
+                </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
 
     </StackPanel>

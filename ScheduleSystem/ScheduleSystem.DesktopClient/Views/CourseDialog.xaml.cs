@@ -23,5 +23,12 @@ namespace ScheduleSystem.DesktopClient.Views
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            StudentDialog studiag = new StudentDialog();
+            
+            studiag.Show();
+        }
     }
 }
