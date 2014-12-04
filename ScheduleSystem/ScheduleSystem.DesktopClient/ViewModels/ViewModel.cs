@@ -27,13 +27,13 @@ namespace ScheduleSystem.DesktopClient.ViewModels
             if (eventHandle != null)
                 eventHandle(this, new PropertyChangedEventArgs(propertyName));
         }
-        public abstract string Validate(string FieldName);
+        public extern string Validate(string FieldName);
         string IDataErrorInfo.this[string field]
         {
             get {
                 return Validate(field);
             }
-            set;
+            //set;
         }
 
         string IDataErrorInfo.Error
