@@ -7,7 +7,7 @@ namespace ScheduleSystem.Test.ClassesTest
     public class StudentTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void AddStudentTestMethod()
         {
             /* 1 - Create new student
              * 2 - Add student name
