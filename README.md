@@ -2,4 +2,6 @@ ScheduleSystem
 ==============
 
 School project..
-hej
+
+This will be a calendar system to keep track of courses, lectures, student and teachers.
+
