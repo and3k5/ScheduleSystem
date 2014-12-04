@@ -27,12 +27,24 @@ namespace ScheduleSystem.DesktopClient.ViewModels
             if (eventHandle != null)
                 eventHandle(this, new PropertyChangedEventArgs(propertyName));
         }
-        public extern string Validate(string FieldName);
         string IDataErrorInfo.this[string field]
         {
             get
             {
-                return Validate(field);
+                switch (field)
+                {
+                    case "Name":
+                        return StringCheck(this.Name) ? null : "String must not be empty";
+                    case "StartDate": 
+                        return (this.StartDate.CompareTo(this.EndDate)>0) ? null : "StartDate must be before end date";
+                    case "EndDate":
+                        return (this.StartDate.CompareTo(this.EndDate) > 0) ? null : "EndDate must be later than start date";
+                    case "Lectures":
+                        return (this.Lectures.Count > 0) ? null : "Course must contain at least one lecture";
+                    case "Students":
+                        return (this.Students.Count > 0) ? null : "Course should contain at least one student";
+                }
+                return null;
             }
             //set;
         }
