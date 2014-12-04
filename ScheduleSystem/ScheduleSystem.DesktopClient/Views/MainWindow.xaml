@@ -12,7 +12,6 @@
                   CanUserReorderColumns="False"
                   CanUserResizeColumns="True"
                   CanUserResizeRows="True">
-            <DataGrid
         </DataGrid>
     </Grid>
 </Window>
