@@ -44,7 +44,17 @@
         <DatePicker Style="{StaticResource checkvalidstyle}"
                  SelectedDate="{Binding EndDate, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
         <Label>Student</Label>
-        <DataGrid ItemsSource="{Binding Path=Students}" RowHeight="26"/>
+        <DataGrid ItemsSource="{Binding Path=Students}" RowHeight="26">
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBox Text="{Binding Path=Name, ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Text="{Binding Path=CPR, ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Text="{Binding Path=Email, ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+        </DataGrid>
 
 
     </StackPanel>
