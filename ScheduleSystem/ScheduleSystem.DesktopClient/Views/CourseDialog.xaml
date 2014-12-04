@@ -30,7 +30,7 @@
                 <Setter Property="VerticalAlignment" Value="Top"></Setter>
                 <Setter Property="Width" Value="292"></Setter>
             </Style>
-            
+
         </StackPanel.Resources>
         <Label FontWeight="Bold" FontSize="14">Course</Label>
         <Label>Course name</Label>
@@ -44,16 +44,25 @@
         <DatePicker Style="{StaticResource checkvalidstyle}"
                  SelectedDate="{Binding EndDate, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
         <Label>Student</Label>
-        <DataGrid ItemsSource="{Binding Path=Students}" RowHeight="26">
-            <DataGrid.RowDetailsTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <TextBox Text="{Binding Path=Name, ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}"/>
-                        <TextBox Text="{Binding Path=CPR, ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}"/>
-                        <TextBox Text="{Binding Path=Email, ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}"/>
-                    </StackPanel>
-                </DataTemplate>
-            </DataGrid.RowDetailsTemplate>
+        <DataGrid x:Name="dataGrid" ItemsSource="{Binding Path=Students}" RowHeight="26" SelectionMode="Single" AutoGenerateColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Width="*" Binding="{Binding Name}"/>
+                <DataGridTemplateColumn Header="Delete" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Delete"
+                                    Command="Delete"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Edit" >
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <Button Content="Edit"/>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
         </DataGrid>
 
 
