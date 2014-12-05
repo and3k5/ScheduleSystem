@@ -9,9 +9,12 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.ComponentModel.DataAnnotations;
 
 public class Lecture
 {
+    [Key]
+    public int ID { get; set; }
     public void init()
     {
         Teachers = new Collection<Teacher>();

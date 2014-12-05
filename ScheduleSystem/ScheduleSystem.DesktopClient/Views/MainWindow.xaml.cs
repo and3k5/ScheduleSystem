@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ScheduleSystem.DesktopClient.Views;
+using ScheduleSystem.Data;
 
 namespace ScheduleSystem.DesktopClient
 {
@@ -24,6 +25,12 @@ namespace ScheduleSystem.DesktopClient
         public MainWindow()
         {
             InitializeComponent();
+            using (ScheduleSystemContext db = new ScheduleSystemContext())
+            {
+                db.Database.CreateIfNotExists();
+                var course = new Course("wat");
+                db.Courses.Add(course);
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
