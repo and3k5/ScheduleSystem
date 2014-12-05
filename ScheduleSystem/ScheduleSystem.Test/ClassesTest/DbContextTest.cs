@@ -14,6 +14,7 @@ namespace ScheduleSystem.Test.ClassesTest
             {
                 var course = new Course("wat");
                 db.Courses.Add(course);
+                db.SaveChanges();
             }
         }
     }

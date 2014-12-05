@@ -4,8 +4,11 @@
         Title="MainWindow" Height="585" Width="824">
     <Grid>
         <Button Content="Course dialog" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="87" Click="Button_Click"/>
-        <DataGrid x:Name="dGrid1" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Height="499" Width="796"
-                  AutoGenerateColumns="False"
+        <DataGrid x:Name="dGrid1" 
+                  HorizontalAlignment="Left" 
+                  
+                  Margin="10,45,0,0" VerticalAlignment="Top" Height="499" Width="796"
+                  AutoGenerateColumns="True"
                   AlternatingRowBackground="LightBlue"
                   AlternationCount="1"
                   GridLinesVisibility="All"
