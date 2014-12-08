@@ -16,18 +16,36 @@ using ScheduleSystem.DesktopClient.Views;
 using ScheduleSystem.Data;
 using System.Data.Entity.Core.Objects;
 using System.Data.Entity;
+using ScheduleSystem.DesktopClient.ViewModels;
+using System.ComponentModel;
 
 namespace ScheduleSystem.DesktopClient
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    public class EditCourse : ICommand
+    {
+        public void Execute(Object _course)
+        {
+            Course course = (Course)_course;
+            CourseDialog cDialog = new CourseDialog();
+            cDialog.DataContext = new CourseViewModel(course);
+            cDialog.Show();
+        }
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+        public event EventHandler CanExecuteChanged;
+    }
     public partial class MainWindow : Window
     {
+        public EditCourse editCourse = new EditCourse();
         public MainWindow()
         {
             InitializeComponent();
-            using (ScheduleSystemContext db = new ScheduleSystemContext())
+            using (ScheduleSystemContext db = ((ScheduleSystemContext)DataContext))
             {
                 db.Database.CreateIfNotExists();
 
@@ -47,21 +65,21 @@ namespace ScheduleSystem.DesktopClient
                 db.Courses.Add(course);
                 
                 db.SaveChanges();
-                
-                DbSet<Course> courses = db.Courses;
-
-                var query =
-                    from Crse in courses
-                    select new { Crse.Name, Crse.StartDate, Crse.EndDate };
-
-                dGrid1.ItemsSource = query.ToList();
             }
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             CourseDialog courseDiag = new CourseDialog();
             courseDiag.Show();
+        }
+        public void UpdateItems()
+        {
+            dGrid1.Items.Refresh();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            UpdateItems();
         }
     }
 }

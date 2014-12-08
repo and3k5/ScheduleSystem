@@ -103,7 +103,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ViewModels\CourseViewModel.cs" />
-    <Compile Include="ViewModels\ViewModel.cs" />
     <Compile Include="Views\CourseDialog.xaml.cs">
       <DependentUpon>CourseDialog.xaml</DependentUpon>
     </Compile>
