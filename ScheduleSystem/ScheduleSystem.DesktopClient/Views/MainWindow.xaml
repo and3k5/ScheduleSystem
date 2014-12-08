@@ -4,17 +4,27 @@
         xmlns:ViewModel="clr-namespace:ScheduleSystem.DesktopClient.ViewModels"
         xmlns:local ="clr-namespace:ScheduleSystem.DesktopClient"
         xmlns:Data="clr-namespace:ScheduleSystem.Data;assembly=ScheduleSystem.Data" x:Class="ScheduleSystem.DesktopClient.MainWindow"
+        
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ignore="http://www.galasoft.ch/ignore"
+        mc:Ignorable="ignore"
+    
         Title="MainWindow" Height="585" Width="824">
     <Window.DataContext>
         <Data:ScheduleSystemContext/>
     </Window.DataContext>
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Open" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed" />
+        <CommandBinding Command="ApplicationCommands.New" CanExecute="NewCmd_CanExecute" Executed="NewCmd_Executed" />
+    </Window.CommandBindings>
     <Grid>
-        <Grid.Resources>
+        <!--Grid.Resources>
             <local:EditCourse x:Key="EC"/>
-        </Grid.Resources>
-        <Button Content="Course dialog" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="87" Click="Button_Click"/>
+        </-->
+        <!--Button Content="Course dialog" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="87" Click="Button_Click"/-->
+        <Button Content="Update table" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="98" Click="Button_Click"/>
         <DataGrid x:Name="dGrid1"
-            ItemsSource="{Binding Path=Courses.Local, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}"
+            ItemsSource="{Binding Path=Courses.Local, UpdateSourceTrigger=PropertyChanged}"
 			HorizontalAlignment="Left" 
             IsReadOnly="True"
 			Margin="10,45,0,0" VerticalAlignment="Top" Height="499" Width="796"
@@ -41,14 +51,12 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Content="Edit"
-								Command="{StaticResource EC}" CommandParameter="{Binding}"/>
+								Command="ApplicationCommands.Open" CommandParameter="{Binding}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
-
-
         </DataGrid>
-        <Button Content="Button" HorizontalAlignment="Left" Height="30" Margin="97,10,0,0" VerticalAlignment="Top" Width="98" Click="Button_Click_1"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="30" Margin="113,10,0,0" VerticalAlignment="Top" Width="92" Command="ApplicationCommands.New"/>
     </Grid>
 </Window>

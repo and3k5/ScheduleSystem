@@ -6,7 +6,12 @@
     <Window.DataContext>
         <ViewModel:StudentViewModel/>
     </Window.DataContext>
-    <Grid>
+    <StackPanel>
+        <Label>Name</Label>
         <TextBox Text="{Binding Path=Name}"></TextBox>
-    </Grid>
+        <Label>CPR</Label>
+        <TextBox Text="{Binding Path=CPR}"></TextBox>
+        <Label>Email</Label>
+        <TextBox Text="{Binding Path=Email}"></TextBox>
+    </StackPanel>
 </Window>

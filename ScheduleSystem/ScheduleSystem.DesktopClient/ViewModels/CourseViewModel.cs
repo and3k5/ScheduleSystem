@@ -33,6 +33,7 @@ namespace ScheduleSystem.DesktopClient.ViewModels
             set
             {
                 _course.Name = value;
+                NotifyPropertyChanged("Name");
             }
         }
 
@@ -45,6 +46,7 @@ namespace ScheduleSystem.DesktopClient.ViewModels
             set
             {
                 _course.StartDate = value;
+                NotifyPropertyChanged("StartDate");
             }
         }
 
@@ -57,6 +59,7 @@ namespace ScheduleSystem.DesktopClient.ViewModels
             set
             {
                 _course.EndDate = value;
+                NotifyPropertyChanged("EndDate");
             }
         }
 
@@ -69,6 +72,7 @@ namespace ScheduleSystem.DesktopClient.ViewModels
             set
             {
                 _course.Lectures = value;
+                NotifyPropertyChanged("Lectures");
             }
         }
 
@@ -81,6 +85,7 @@ namespace ScheduleSystem.DesktopClient.ViewModels
             set
             {
                 _course.Students = value;
+                NotifyPropertyChanged("Students");
             }
         }
         

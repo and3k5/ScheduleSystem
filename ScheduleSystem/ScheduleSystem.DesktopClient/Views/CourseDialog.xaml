@@ -6,6 +6,10 @@
     <Window.DataContext>
         <ViewModel:CourseViewModel/>
     </Window.DataContext>
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Open" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed" />
+        <CommandBinding Command="ApplicationCommands.New" CanExecute="CommandBinding_CanExecute" Executed="NewCmd_Executed" />
+    </Window.CommandBindings>
     <StackPanel Margin="0,0,0,0">
         <StackPanel.Resources>
             <Style x:Key="checkvalidstyle" TargetType="{x:Type Control}">
@@ -43,7 +47,8 @@
         <Label>EndDate</Label>
         <DatePicker Style="{StaticResource checkvalidstyle}"
                  SelectedDate="{Binding EndDate, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
-        <Label>Student</Label>
+        <Label>Students</Label>
+        <Button HorizontalAlignment="Left" Width="50" Command="ApplicationCommands.New">Add</Button>
         <ListView x:Name="dataGrid" ItemsSource="{Binding Path=Students}" SelectionMode="Single">
             <ListView.View>
                 <GridView>
@@ -59,7 +64,7 @@
                     <GridViewColumn Header="Edit" >
                         <GridViewColumn.CellTemplate>
                     <DataTemplate>
-                        <Button Content="Edit" Click="Button_Click"/>
+                        <Button Content="Edit" Command="ApplicationCommands.Open" CommandParameter="{Binding}"/>
                     </DataTemplate>
                 </GridViewColumn.CellTemplate>
                 </GridViewColumn>
