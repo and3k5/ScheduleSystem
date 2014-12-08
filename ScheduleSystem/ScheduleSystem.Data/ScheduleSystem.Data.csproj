@@ -84,7 +84,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="ScheduleSystem.cs" />
+    <Compile Include="ScheduleSystemContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

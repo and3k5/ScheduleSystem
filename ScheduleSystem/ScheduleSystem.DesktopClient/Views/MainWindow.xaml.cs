@@ -42,6 +42,7 @@ namespace ScheduleSystem.DesktopClient
         public void UpdateItems()
         {
             dGrid1.Items.Refresh();
+            SSCTX.SaveChanges();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
