@@ -12,6 +12,7 @@ namespace ScheduleSystem.Test.ClassesTest
         {
             using (ScheduleSystemContext db = new ScheduleSystemContext())
             {
+                db.Database.CreateIfNotExists();
                 var course = new Course("wat");
                 db.Courses.Add(course);
                 db.SaveChanges();
