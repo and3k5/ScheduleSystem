@@ -30,25 +30,29 @@ namespace ScheduleSystem.DesktopClient
             using (ScheduleSystemContext db = new ScheduleSystemContext())
             {
                 db.Database.CreateIfNotExists();
-                var course = new Course("wat1");
+
+                Course course = new Course("Test 1");
                 course.StartDate = DateTime.Now;
                 course.EndDate = DateTime.Now.AddDays(7);
                 db.Courses.Add(course);
-                course = new Course("wat2");
+                
+                course = new Course("Test 2");
                 course.StartDate = DateTime.Now;
                 course.EndDate = DateTime.Now.AddDays(7);
                 db.Courses.Add(course);
-                course = new Course("wat3");
+
+                course = new Course("Test 3");
                 course.StartDate = DateTime.Now;
                 course.EndDate = DateTime.Now.AddDays(7);
                 db.Courses.Add(course);
+                
                 db.SaveChanges();
+                
                 DbSet<Course> courses = db.Courses;
 
                 var query =
-                from Crse in courses
-                where 1 == 1
-                select new { course.Name, course.StartDate, course.EndDate };
+                    from Crse in courses
+                    select new { Crse.Name, Crse.StartDate, Crse.EndDate };
 
                 dGrid1.ItemsSource = query.ToList();
             }
