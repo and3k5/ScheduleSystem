@@ -18,6 +18,9 @@ namespace ScheduleSystem.DesktopClient.Views
 {
     /// <summary>
     /// Interaction logic for AboutDialog.xaml
+    /// ATTENTION:
+    ///     We know that this is not (more like 'absolutely not') related to MVVM.
+    ///     This is just our signature!
     /// </summary>
     public partial class AboutDialog : Window
     {
