@@ -19,6 +19,8 @@ public class Course
     {
         Lectures = new Collection<Lecture>();
         Students = new Collection<Student>();
+        StartDate = DateTime.Now;
+        EndDate = DateTime.Now;
     }
     public Course()
     {

@@ -43,10 +43,10 @@
                  Text="{Binding Name, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
         <Label>StartDate</Label>
         <DatePicker Style="{StaticResource checkvalidstyle}"
-                 SelectedDate="{Binding StartDate, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+                 SelectedDate="{Binding StartDate, UpdateSourceTrigger=LostFocus, ValidatesOnDataErrors=True}" FirstDayOfWeek="Monday" Text="1/1/2014" DisplayDateStart="2000-01-01" />
         <Label>EndDate</Label>
         <DatePicker Style="{StaticResource checkvalidstyle}"
-                 SelectedDate="{Binding EndDate, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+                 SelectedDate="{Binding EndDate, UpdateSourceTrigger=LostFocus, ValidatesOnDataErrors=True}" FirstDayOfWeek="Monday" Text="1/1/2014" DisplayDateStart="2000-01-01" />
         <Label>Students</Label>
         <Button HorizontalAlignment="Left" Width="50" Command="ApplicationCommands.New">Add</Button>
         <ListView x:Name="dataGrid" ItemsSource="{Binding Path=Students}" SelectionMode="Single">
