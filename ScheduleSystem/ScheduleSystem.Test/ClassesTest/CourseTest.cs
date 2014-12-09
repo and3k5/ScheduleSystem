@@ -9,57 +9,60 @@ namespace ScheduleSystem.Test.ClassesTest
         [TestMethod]
         public void CheckIfStudensAreAddedToCourse()
         {
-            // Create course and student
+            /*  1 - Create course
+             *  2 - Create Student
+             *  3 - Add student to course
+             *  4 - Check if student is assigned to course
+             */
             Course course = new Course();
-            Student student = new Student();
 
-            // Set some information in student object
+            Student student = new Student();
             student.CPR = "010101-0101";
             student.Name = "Herbert";
             student.Email = "test@test.com";
 
-            // Add student to course object
             course.Students.Add(student);
 
-            // Assertion = course should contain one student
             Assert.IsTrue(course.Students.Count == 1);
         }
 
         [TestMethod]
         public void CheckIfStudensAreRemovedFromCourse()
         {
-            // Create course and student
+            /*  1 - Create course
+             *  2 - Create Student
+             *  3 - Add student to course
+             *  4 - Check if student is assigned to course
+             *  5 - Remove student from course
+             *  6 - Check if student has been removed
+             */
             Course course = new Course();
-            Student student = new Student();
 
-            // Set some information in student object
+            Student student = new Student();
             student.CPR = "010101-0101";
             student.Name = "Herbert";
             student.Email = "test@test.com";
-            
-            // Add student to course object
+
             course.Students.Add(student);
 
-            // Assertion = course should contain one student
             Assert.IsTrue(course.Students.Count == 1);
             
-            // Remove student from course object
             course.Students.Remove(student);
 
-            // Assertion = course should not contain any student
             Assert.IsTrue(course.Students.Count == 0);
         }
 
         [TestMethod]
         public void CheckIfNameIsAssignedFromConstructor()
         {
-            // Set course name variable
+            /*  1 - Set course name variable
+             *  2 - Create course with name assigned from contructor parameter
+             *  3 - Assertion = course name should match the constructor parameter
+             */
             String CourseName = "Programming 3 - Test";
             
-            // Create course with name assigned from contructor parameter
             Course course = new Course(CourseName);
             
-            // Assertion = course name should match the constructor parameter
             Assert.AreEqual(CourseName, course.Name);
         }
     }
