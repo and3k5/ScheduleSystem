@@ -25,17 +25,17 @@
         <Button Content="Update table" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="98" Click="Button_Click"/>
         <DataGrid x:Name="dGrid1"
             ItemsSource="{Binding Path=Courses.Local, UpdateSourceTrigger=PropertyChanged}" 
-            IsReadOnly="True"
+            IsReadOnly="False"
 			Margin="0,45,0,0"
 			AutoGenerateColumns="False"
 			AlternatingRowBackground="LightBlue"
 			AlternationCount="1"
 			GridLinesVisibility="All"
-			CanUserReorderColumns="False"
-			CanUserResizeColumns="True"
-			CanUserResizeRows="True" VerticalContentAlignment="Center">
+			CanUserResizeColumns="False" VerticalContentAlignment="Center" CanUserReorderColumns="False" CanUserAddRows="False" CanUserResizeRows="False">
 
             <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" IsReadOnly="True" Width="*" Binding="{Binding Name}">
+                </DataGridTextColumn>
                 <DataGridTemplateColumn Header="Delete" >
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -44,8 +44,6 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTextColumn Header="Name" Width="*"  Binding="{Binding Name}">
-                </DataGridTextColumn>
                 <DataGridTemplateColumn Header="Edit" >
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

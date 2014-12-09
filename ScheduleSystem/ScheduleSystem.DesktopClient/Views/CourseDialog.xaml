@@ -49,28 +49,34 @@
                  SelectedDate="{Binding EndDate, UpdateSourceTrigger=LostFocus, ValidatesOnDataErrors=True}" FirstDayOfWeek="Monday" Text="1/1/2014" DisplayDateStart="2000-01-01" HorizontalAlignment="Stretch" Width="Auto" />
         <Label>Students</Label>
         <Button HorizontalAlignment="Left" Width="50" Command="ApplicationCommands.New">Add</Button>
-        <ListView x:Name="dataGrid" ItemsSource="{Binding Path=Students}" SelectionMode="Single">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
-                    <GridViewColumn Header="Delete" >
-                        <GridViewColumn.CellTemplate>
+        <DataGrid x:Name="dataGrid" 
+                  ItemsSource="{Binding Path=Students}" 
+                  SelectionMode="Single" 
+                  AutoGenerateColumns="False"
+                  AlternatingRowBackground="LightBlue"
+                  AlternationCount="1"
+                  IsReadOnly="False"
+                  GridLinesVisibility="All"
+                  VerticalContentAlignment="Center" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserAddRows="False">
+            <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name" IsReadOnly="True" Width="*" Binding="{Binding Name}"/>
+                    <DataGridTemplateColumn Header="Delete" >
+                    <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Content="Delete"
                                     Command="Delete"/>
                             </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <GridViewColumn Header="Edit" >
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button Content="Edit" Command="ApplicationCommands.Open" CommandParameter="{Binding}"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                </GridView>
-            </ListView.View>
-        </ListView>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Edit" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Edit" Command="ApplicationCommands.Open" CommandParameter="{Binding}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
 
 
     </StackPanel>
