@@ -4,6 +4,10 @@ namespace ScheduleSystem.Data
     using System.Collections.Generic;
     using System.Data.Entity;
     using System.Linq;
+    using System.Data.SQLite;
+    using System.Data.SQLite.EF6;
+    using System.Data.SQLite.Linq;
+    using System.Data.SQLite.Generic;
 
     public class ScheduleSystemContext : DbContext, IDisposable
     {
@@ -15,7 +19,8 @@ namespace ScheduleSystem.Data
         // connection string in the application configuration file.
         public ScheduleSystemContext()
         //    : base("name=ScheduleSystem.Data.Properties.Settings.ScheduleSystemContext")
-            : base(ScheduleSystem.Data.Properties.Settings.Default.ScheduleSystemContext)
+        //    : base(ScheduleSystem.Data.Properties.Settings.Default.ScheduleSystemContext)
+            : base("ScheduleSystemDatabase")
         {
             
         }
