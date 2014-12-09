@@ -41,31 +41,33 @@ namespace ScheduleSystem.Test.ClassesTest
         [TestMethod]
         public void TestCountOnTableWhenInsertAnotherObjectToDatabase()
         {
-            /* 1 - Create database if it does not exist
-             * 2 - Create course
-             * 3 - Create student
-             * 4 - Add student to course
-             * 5 - Add course to database
-             * 6 - Check database student count
-             */
-            Data.ScheduleSystemContext db = new Data.ScheduleSystemContext();
-            db.Database.CreateIfNotExists();
+            using (ScheduleSystemContext db = new ScheduleSystemContext())
+            {
+                /* 1 - Create database if it does not exist
+                 * 2 - Create course
+                 * 3 - Create student
+                 * 4 - Add student to course
+                 * 5 - Add course to database
+                 * 6 - Check database student count
+                 */
+                db.Database.CreateIfNotExists();
 
-            Course course = new Course();
-            course.Name = "test";
-            course.StartDate = DateTime.Now;
-            course.EndDate = DateTime.Now;
+                Course course = new Course();
+                course.Name = "test";
+                course.StartDate = DateTime.Now;
+                course.EndDate = DateTime.Now;
 
-            Student student = new Student();
-            student.Name = "Bent";
-            student.CPR = "00000000000";
-            student.Email = "example@example.com";
+                Student student = new Student();
+                student.Name = "Bent";
+                student.CPR = "00000000000";
+                student.Email = "example@example.com";
 
-            course.Students.Add(student);
+                course.Students.Add(student);
 
-            db.Courses.Add(course);
-            
-            Assert.AreEqual(1, db.Students.Local.Count);
+                db.Courses.Add(course);
+
+                Assert.AreEqual(1, db.Students.Local.Count);
+            }
         }
     }
 }
