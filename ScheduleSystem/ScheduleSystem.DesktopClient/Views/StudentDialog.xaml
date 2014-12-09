@@ -9,7 +9,7 @@
     <Window.CommandBindings>
         <CommandBinding Command="ApplicationCommands.Close" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed" />
     </Window.CommandBindings>
-    <StackPanel>
+    <StackPanel Background="#FFE8E8E8">
         <StackPanel.Resources>
             <Style x:Key="checkvalidstyle" TargetType="{x:Type Control}">
                 <Style.Triggers>

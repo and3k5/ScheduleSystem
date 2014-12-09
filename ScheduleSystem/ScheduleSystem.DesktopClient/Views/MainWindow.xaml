@@ -9,7 +9,7 @@
         xmlns:ignore="http://www.galasoft.ch/ignore"
         mc:Ignorable="ignore"
     
-        Title="MainWindow" Height="585" Width="824">
+        Title="MainWindow" Height="585" Width="824" MinWidth="800" MinHeight="550">
     <Window.DataContext>
         <Data:ScheduleSystemContext/>
     </Window.DataContext>
@@ -17,24 +17,23 @@
         <CommandBinding Command="ApplicationCommands.Open" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed" />
         <CommandBinding Command="ApplicationCommands.New" CanExecute="NewCmd_CanExecute" Executed="NewCmd_Executed" />
     </Window.CommandBindings>
-    <Grid>
+    <Grid Background="#FFE8E8E8">
         <!--Grid.Resources>
             <local:EditCourse x:Key="EC"/>
         </-->
         <!--Button Content="Course dialog" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="87" Click="Button_Click"/-->
         <Button Content="Update table" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="98" Click="Button_Click"/>
         <DataGrid x:Name="dGrid1"
-            ItemsSource="{Binding Path=Courses.Local, UpdateSourceTrigger=PropertyChanged}"
-			HorizontalAlignment="Left" 
+            ItemsSource="{Binding Path=Courses.Local, UpdateSourceTrigger=PropertyChanged}" 
             IsReadOnly="True"
-			Margin="10,45,0,0" VerticalAlignment="Top" Height="499" Width="796"
+			Margin="0,45,0,0"
 			AutoGenerateColumns="False"
 			AlternatingRowBackground="LightBlue"
 			AlternationCount="1"
 			GridLinesVisibility="All"
 			CanUserReorderColumns="False"
 			CanUserResizeColumns="True"
-			CanUserResizeRows="True">
+			CanUserResizeRows="True" VerticalContentAlignment="Center">
 
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="Delete" >
@@ -45,7 +44,7 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTextColumn Header="Name" Binding="{Binding Name}">
+                <DataGridTextColumn Header="Name" Width="*"  Binding="{Binding Name}">
                 </DataGridTextColumn>
                 <DataGridTemplateColumn Header="Edit" >
                     <DataGridTemplateColumn.CellTemplate>
