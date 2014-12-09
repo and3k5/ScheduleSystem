@@ -39,7 +39,7 @@ namespace ScheduleSystem.Test.ClassesTest
              * 3 - Assign teacher to lecture
              * 4 - Check if Teacher is assigned to lecture
              * 5 - Remove teacher from lecture
-             * 6 - Check if teacher is removed
+             * 6 - Check if teacher has been removed
              */
             Lecture lecture = new Lecture();
             lecture.Name = "Programming";
