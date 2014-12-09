@@ -38,5 +38,27 @@ namespace ScheduleSystem.Test.ClassesTest
                 db.SaveChanges();
             }
         }
+        [TestMethod]
+        public void TestCountOnTableWhenInsertAnotherObjectToDatabase()
+        {
+            Data.ScheduleSystemContext db = new Data.ScheduleSystemContext();
+            db.Database.CreateIfNotExists();
+
+            Course course = new Course();
+            course.Name = "test";
+            course.StartDate = DateTime.Now;
+            course.EndDate = DateTime.Now;
+
+            Student student = new Student();
+            student.Name = "Bent";
+            student.CPR = "00000000000";
+            student.Email = "example@example.com";
+
+            course.Students.Add(student);
+
+            db.Courses.Add(course);
+            
+            Assert.AreEqual(1, db.Students.Local.Count);
+        }
     }
 }
