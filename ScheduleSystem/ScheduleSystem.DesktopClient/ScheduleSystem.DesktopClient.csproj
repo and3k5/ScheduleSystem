@@ -89,18 +89,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\LectureViewModel.cs" />
     <Compile Include="ViewModels\StudentViewModel.cs" />
+    <Compile Include="ViewModels\TeacherViewModel.cs" />
     <Compile Include="Views\AboutDialog.xaml.cs">
       <DependentUpon>AboutDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\LectureDialog.xaml.cs">
+      <DependentUpon>LectureDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\StudentDialog.xaml.cs">
       <DependentUpon>StudentDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TeacherDialog.xaml.cs">
+      <DependentUpon>TeacherDialog.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\AboutDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CourseDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LectureDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -121,6 +133,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\StudentDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TeacherDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
