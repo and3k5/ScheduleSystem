@@ -60,8 +60,10 @@ namespace ScheduleSystem.DesktopClient
             Course course = (Course)e.Parameter;
             CourseDialog cDialog = new CourseDialog();
             cDialog.DataContext = new CourseViewModel(course);
-            cDialog.Show();
             cDialog.Closed += cDialog_Closed;
+            cDialog.ShowDialog();
+            //cDialog.Show();
+            
         }
 
         private void NewCmd_CanExecute(object sender, CanExecuteRoutedEventArgs e)
@@ -75,12 +77,20 @@ namespace ScheduleSystem.DesktopClient
             SSCTX.Courses.Add(course);
             CourseDialog cDialog = new CourseDialog();
             cDialog.DataContext = new CourseViewModel(course);
-            cDialog.Show();
             cDialog.Closed += cDialog_Closed;
+            cDialog.ShowDialog();
+            //cDialog.Show();
+            
         }
         void cDialog_Closed(object sender, EventArgs e)
         {
             UpdateItems();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            AboutDialog aDialog = new AboutDialog();
+            aDialog.ShowDialog();
         }
     }
 }

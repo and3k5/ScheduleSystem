@@ -26,7 +26,8 @@ namespace ScheduleSystem.DesktopClient.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            this.DialogResult = true;
+            //this.Close();
         }
 
         private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
@@ -45,7 +46,8 @@ namespace ScheduleSystem.DesktopClient.Views
 
         private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-
+            this.DialogResult = true;
+            //this.Close();
         }
     }
 }
