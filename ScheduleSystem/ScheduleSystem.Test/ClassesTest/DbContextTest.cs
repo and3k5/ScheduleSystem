@@ -41,6 +41,13 @@ namespace ScheduleSystem.Test.ClassesTest
         [TestMethod]
         public void TestCountOnTableWhenInsertAnotherObjectToDatabase()
         {
+            /* 1 - Create database if it does not exist
+             * 2 - Create course
+             * 3 - Create student
+             * 4 - Add student to course
+             * 5 - Add course to database
+             * 6 - Check database student count
+             */
             Data.ScheduleSystemContext db = new Data.ScheduleSystemContext();
             db.Database.CreateIfNotExists();
 
