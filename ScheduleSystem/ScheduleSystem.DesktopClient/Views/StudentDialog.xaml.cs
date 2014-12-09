@@ -23,5 +23,29 @@ namespace ScheduleSystem.DesktopClient.Views
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = IsValid(sender as DependencyObject);
+        }
+
+        // http://stackoverflow.com/a/4650392
+        private bool IsValid(DependencyObject obj)
+        {
+            return !Validation.GetHasError(obj) &&
+                LogicalTreeHelper.GetChildren(obj)
+                .OfType<DependencyObject>()
+                .All(IsValid);
+        }
+
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+
+        }
     }
 }
