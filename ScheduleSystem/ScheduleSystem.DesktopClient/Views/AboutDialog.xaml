@@ -1,13 +1,13 @@
 ﻿<Window x:Class="ScheduleSystem.DesktopClient.Views.AboutDialog"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="AboutDialog" Height="414" Width="312">
+        Title="AboutDialog" Height="414" Width="312" Loaded="Window_Loaded">
     <Grid>
         <Label Content="ScheduleSystem" Margin="10,10,10,0" VerticalAlignment="Top" Height="57" FontSize="30" FontWeight="Bold"/>
-        <RichTextBox Margin="10,72,10,10">
+        <RichTextBox Name="RTBox" Margin="10,72,10,10" TextChanged="RTBox_TextChanged" AcceptsReturn="False" AutoWordSelection="False" AllowDrop="False" IsReadOnly="True" IsUndoEnabled="False">
             <FlowDocument>
-                <Paragraph>
-                    <Run Text="Blarh"/>
+                <Paragraph Name="first" FontSize="14.6666666666667" FontFamily="Calibri" Margin="0,0,0,13.33">
+                    
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
