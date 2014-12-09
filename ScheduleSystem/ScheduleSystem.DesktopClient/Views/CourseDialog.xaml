@@ -7,8 +7,8 @@
         <ViewModel:CourseViewModel/>
     </Window.DataContext>
     <Window.CommandBindings>
-        <CommandBinding Command="ApplicationCommands.Open" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed" />
-        <CommandBinding Command="ApplicationCommands.New" CanExecute="CommandBinding_CanExecute" Executed="NewCmd_Executed" />
+        <CommandBinding Command="ApplicationCommands.Open" CanExecute="CommonCmd_CanExecute" Executed="EditCmd_Executed" />
+        <CommandBinding Command="ApplicationCommands.New" CanExecute="CommonCmd_CanExecute" Executed="NewCmd_Executed" />
     </Window.CommandBindings>
     <StackPanel Margin="0,0,0,-1" Background="#FFE8E8E8" MinWidth="290" MinHeight="450" VerticalAlignment="Top">
         <StackPanel.Resources>
