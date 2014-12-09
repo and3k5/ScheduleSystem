@@ -117,7 +117,6 @@ namespace ScheduleSystem.DesktopClient.ViewModels
                 }
                 return null;
             }
-            //set;
         }
 
         string IDataErrorInfo.Error
