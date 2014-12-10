@@ -9,7 +9,8 @@ namespace ScheduleSystem.DesktopClient.ViewModels
 {
     public class StudentViewModel : Student, IDataErrorInfo, INotifyPropertyChanged
     {
-        private Student _student = new Student();
+        // Define _student as a student object
+        private Student _student;
         private static bool StringCheck(string txt)
         {
             return (!String.IsNullOrEmpty(txt) && !String.IsNullOrWhiteSpace(txt) && txt.Trim().Length != 0);

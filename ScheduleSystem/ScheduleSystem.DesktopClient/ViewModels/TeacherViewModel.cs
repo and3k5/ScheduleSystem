@@ -9,7 +9,7 @@ namespace ScheduleSystem.DesktopClient.ViewModels
 {
     public class TeacherViewModel : Teacher, IDataErrorInfo, INotifyPropertyChanged
     {
-        // Define _teacher as Teacher object
+        // Define _teacher as a Teacher object
         private Teacher _teacher;   // = new Teacher();
         
         private static bool StringCheck(string txt)
