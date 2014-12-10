@@ -32,7 +32,27 @@ namespace ScheduleSystem.DesktopClient
             InitializeComponent();
             // Create database if it does not exist
             SSCTX.Database.CreateIfNotExists();
+
+            // For some reason, we have to load every table manually.
+            SSCTX.Students.Load();
+            SSCTX.Students.Local.CollectionChanged += Local_CollectionChanged;
+            SSCTX.Teachers.Load();
+            SSCTX.Teachers.Local.CollectionChanged += Local_CollectionChanged;
+            SSCTX.Lectures.Load();
+            SSCTX.Lectures.Local.CollectionChanged += Local_CollectionChanged;
+            SSCTX.Courses.Load();
+            SSCTX.Courses.Local.CollectionChanged += Local_CollectionChanged;
         }
+
+        void Local_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Remove)
+            {
+                SSCTX.SaveChanges();
+            }
+            Console.WriteLine(e.Action.ToString());
+        }
+
         //Easy workaround to access the DataContext as a ScheduleSystemContext, 
         //instead of casting every time
         private ScheduleSystemContext SSCTX
@@ -73,6 +93,7 @@ namespace ScheduleSystem.DesktopClient
             // Creates a new course object and shows the "Add Course" window
             // Course is saved to the databse when windows is closed.
             Course course = new Course();
+            
             SSCTX.Courses.Add(course);
             CourseDialog cDialog = new CourseDialog();
             cDialog.DataContext = new CourseViewModel(course);
@@ -162,7 +183,14 @@ namespace ScheduleSystem.DesktopClient
             // If save was pressed, Add the student object to the database
             if (result == true)
             {
-                SSCTX.Students.Add(student);
+                try
+                {
+                    SSCTX.Students.Add(student);
+                }
+                catch (NullReferenceException ex)
+                {
+                    
+                }
             }
 
             // Also this is far from MVVM standard, but PropertyChanged
