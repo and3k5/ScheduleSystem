@@ -130,6 +130,7 @@ namespace ScheduleSystem.DesktopClient.Views
         {
             // Update items on the datagrid (the list of students)
             dataGrid.Items.Refresh();
+            // Update items on the seconds datagrid (the list of lectures)
             dGrid2.Items.Refresh();
         }
     }
