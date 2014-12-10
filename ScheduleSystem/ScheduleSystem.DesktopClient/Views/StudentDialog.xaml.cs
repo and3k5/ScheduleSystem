@@ -32,6 +32,7 @@ namespace ScheduleSystem.DesktopClient.Views
 
         private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
+            // Enables save function when entered information is valid.
             e.CanExecute = IsValid(sender as DependencyObject);
         }
 
