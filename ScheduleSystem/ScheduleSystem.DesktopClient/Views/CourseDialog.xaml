@@ -6,12 +6,12 @@
     <Window.DataContext>
         <ViewModel:CourseViewModel/>
     </Window.DataContext>
-    <Window.CommandBindings>
-        <CommandBinding Command="ApplicationCommands.Open" CanExecute="CommonCmd_CanExecute" Executed="EditCmd_Executed" />
-        <CommandBinding Command="ApplicationCommands.New" CanExecute="CommonCmd_CanExecute" Executed="NewCmd_Executed" />
-    </Window.CommandBindings>
     <Grid Margin="0,0,0,10">
         <StackPanel Margin="10,10,336,0" Background="#FFE8E8E8" MinWidth="290" MinHeight="400" VerticalAlignment="Top" Height="399">
+            <StackPanel.CommandBindings>
+                <CommandBinding Command="ApplicationCommands.Open" CanExecute="CommonCmd_CanExecute" Executed="EditStudentCmd_Executed" />
+                <CommandBinding Command="ApplicationCommands.New" CanExecute="CommonCmd_CanExecute" Executed="NewStudentCmd_Executed" />
+            </StackPanel.CommandBindings>
             <StackPanel.Resources>
                 <Style x:Key="checkvalidstyle" TargetType="{x:Type Control}">
                     <Style.Triggers>
@@ -79,7 +79,7 @@
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>
-        <DataGrid Margin="330,6,6,-5" VerticalAlignment="Top" Height="418"
+        <DataGrid Margin="330,6,6,0" VerticalAlignment="Top" Height="384"
             ItemsSource="{Binding Path=Lectures, UpdateSourceTrigger=PropertyChanged}"
             x:Name="dGrid2"
             IsReadOnly="False"
@@ -88,6 +88,9 @@
 	        AlternationCount="1"
 	        GridLinesVisibility="All"
 	        CanUserResizeColumns="False" VerticalContentAlignment="Center" CanUserReorderColumns="False" CanUserAddRows="False" CanUserResizeRows="False">
+            <DataGrid.CommandBindings>
+                <CommandBinding Command="ApplicationCommands.Open" CanExecute="CommonCmd_CanExecute" Executed="EditLectureCmd_Executed" />
+            </DataGrid.CommandBindings>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" IsReadOnly="True" Width="*" Binding="{Binding Name}">
                 </DataGridTextColumn>
@@ -109,5 +112,10 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
+        <Button Content="New lecture" HorizontalAlignment="Left" Height="29" Margin="550,390,0,0" VerticalAlignment="Top" Width="97" Command="ApplicationCommands.New">
+            <Button.CommandBindings>
+                <CommandBinding Command="ApplicationCommands.New" CanExecute="CommonCmd_CanExecute" Executed="NewLectureCmd_Executed" />
+            </Button.CommandBindings>
+        </Button>
     </Grid>
 </Window>

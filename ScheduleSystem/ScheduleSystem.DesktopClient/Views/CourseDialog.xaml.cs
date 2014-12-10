@@ -33,7 +33,7 @@ namespace ScheduleSystem.DesktopClient.Views
             e.CanExecute = true;
         }
 
-        private void EditCmd_Executed(object sender, ExecutedRoutedEventArgs e)
+        private void EditStudentCmd_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             // This function below is not best practice when looking from 
             // the MVVM perspective.
@@ -70,7 +70,7 @@ namespace ScheduleSystem.DesktopClient.Views
             UpdateItems();
         }
 
-        private void NewCmd_Executed(object sender, ExecutedRoutedEventArgs e)
+        private void NewStudentCmd_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             // This function below is not best practice when looking from 
             // the MVVM perspective.
@@ -97,10 +97,40 @@ namespace ScheduleSystem.DesktopClient.Views
             // does not work properly with the DataGrid item.
             UpdateItems();
         }
+
+        private void EditLectureCmd_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            // Opens the "Edit lecture" dialog and
+            // enabled you to change the parameters of the
+            // lecture selected from the databse.
+            Lecture lecture = (Lecture)e.Parameter;
+            LectureDialog cDialog = new LectureDialog();
+            cDialog.DataContext = new LectureViewModel(lecture);
+            
+            cDialog.ShowDialog();
+
+            UpdateItems();
+        }
+
+        private void NewLectureCmd_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            // Creates a new lecture object and shows the "Add lecture" window
+            // lecture is saved to the databse when windows is closed.
+            Lecture lecture = new Lecture();
+
+            ((CourseViewModel)DataContext).Lectures.Add(lecture);
+            LectureDialog cDialog = new LectureDialog();
+            cDialog.DataContext = new LectureViewModel(lecture);
+            
+            cDialog.ShowDialog();
+            UpdateItems();
+        }
+
         private void UpdateItems()
         {
             // Update items on the datagrid (the list of students)
             dataGrid.Items.Refresh();
+            dGrid2.Items.Refresh();
         }
     }
 }
