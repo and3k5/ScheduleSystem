@@ -30,7 +30,6 @@ namespace ScheduleSystem.DesktopClient
         public MainWindow()
         {
             InitializeComponent();
-            
             SSCTX.Database.CreateIfNotExists();
         }
         private ScheduleSystemContext SSCTX

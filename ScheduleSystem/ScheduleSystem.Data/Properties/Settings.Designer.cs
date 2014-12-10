@@ -22,16 +22,5 @@ namespace ScheduleSystem.Data.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("data source=(LocalDb)\\v11.0;initial catalog=ScheduleSystem.Data.ScheduleSystemCon" +
-            "text;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")]
-        public string ScheduleSystemContext {
-            get {
-                return ((string)(this["ScheduleSystemContext"]));
-            }
-        }
     }
 }
