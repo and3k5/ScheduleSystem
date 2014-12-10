@@ -9,16 +9,19 @@ namespace ScheduleSystem.DesktopClient.ViewModels
 {
     public class TeacherViewModel : Teacher, IDataErrorInfo, INotifyPropertyChanged
     {
-        private Teacher _teacher = new Teacher();
+        // Define _teacher as Teacher object
+        private Teacher _teacher;   // = new Teacher();
+        
         private static bool StringCheck(string txt)
         {
             return (!String.IsNullOrEmpty(txt) && !String.IsNullOrWhiteSpace(txt) && txt.Trim().Length != 0);
         }
+
         public TeacherViewModel()
         {
             _teacher = new Teacher();
         }
-
+        
         public TeacherViewModel(Teacher teacher)
         {
             _teacher = teacher;
@@ -87,7 +90,7 @@ namespace ScheduleSystem.DesktopClient.ViewModels
                 }
                 return null;
             }
-            //set;
+
         }
 
         string IDataErrorInfo.Error

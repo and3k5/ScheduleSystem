@@ -30,8 +30,11 @@ namespace ScheduleSystem.DesktopClient
         public MainWindow()
         {
             InitializeComponent();
+            // Create database if it does not exist
             SSCTX.Database.CreateIfNotExists();
         }
+        //Easy workaround to access the DataContext as a ScheduleSystemContext, 
+        //instead of casting every time
         private ScheduleSystemContext SSCTX
         {
             get
@@ -41,50 +44,58 @@ namespace ScheduleSystem.DesktopClient
         }
         public void CourseView_UpdateItems()
         {
+            // Refresh datagrid and save changes to database.
             dGrid1.Items.Refresh();
             SSCTX.SaveChanges();
         }
 
         private void CourseView_CommonCmd_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
+            // User can always add or edit a customer, so can execute will just be
+            // true for both of the commands
             e.CanExecute = true;
         }
 
         private void CourseView_EditCmd_Executed(object sender, ExecutedRoutedEventArgs e)
         {
+            // Opens the "Edit Course" dialog and
+            // enabled you to change the parameters of the
+            // course selected from the databse.
             Course course = (Course)e.Parameter;
             CourseDialog cDialog = new CourseDialog();
             cDialog.DataContext = new CourseViewModel(course);
             cDialog.Closed += CourseView_cDialog_Closed;
             cDialog.ShowDialog();
-            //cDialog.Show();
-            
         }
 
         private void CourseView_NewCmd_Executed(object sender, ExecutedRoutedEventArgs e)
         {
+            // Creates a new course object and shows the "Add Course" window
+            // Course is saved to the databse when windows is closed.
             Course course = new Course();
             SSCTX.Courses.Add(course);
             CourseDialog cDialog = new CourseDialog();
             cDialog.DataContext = new CourseViewModel(course);
             cDialog.Closed += CourseView_cDialog_Closed;
             cDialog.ShowDialog();
-            //cDialog.Show();
-            
         }
         void CourseView_cDialog_Closed(object sender, EventArgs e)
         {
+            // Updates items in course view
             CourseView_UpdateItems();
         }
 
         private void AboutBtnClick(object sender, RoutedEventArgs e)
         {
+            // Creates the "About" dialog and shows it when button is clicked.
             AboutDialog aDialog = new AboutDialog();
             aDialog.ShowDialog();
         }
 
         private void StudentView_CommonCmd_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
+            // User can always add or edit a customer, so can execute will just be
+            // true for both of the commands 
             e.CanExecute = true;
         }
 
@@ -127,6 +138,7 @@ namespace ScheduleSystem.DesktopClient
         }
         public void StudentView_UpdateItems()
         {
+            // Refresh datagrid and save changes to database.
             dGrid2.Items.Refresh();
             SSCTX.SaveChanges();
         }
