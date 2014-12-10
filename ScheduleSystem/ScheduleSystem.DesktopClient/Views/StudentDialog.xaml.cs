@@ -24,12 +24,6 @@ namespace ScheduleSystem.DesktopClient.Views
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.DialogResult = true;
-            //this.Close();
-        }
-
         private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
             // Enables save function when entered information is valid.
