@@ -4,11 +4,6 @@
         xmlns:ViewModel="clr-namespace:ScheduleSystem.DesktopClient.ViewModels"
         xmlns:local ="clr-namespace:ScheduleSystem.DesktopClient"
         xmlns:Data="clr-namespace:ScheduleSystem.Data;assembly=ScheduleSystem.Data" x:Class="ScheduleSystem.DesktopClient.MainWindow"
-        
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:ignore="http://www.galasoft.ch/ignore"
-        mc:Ignorable="ignore"
-    
         Title="MainWindow" Height="585" Width="824" MinWidth="800" MinHeight="550" Icon="/ScheduleSystem.DesktopClient;component/icon.ico">
     <Window.DataContext>
         <Data:ScheduleSystemContext/>
