@@ -90,5 +90,46 @@
                 <Button Content="About" Margin="741,20,0,0" VerticalAlignment="Top" Click="AboutBtnClick"/>
             </Grid>
         </TabItem>
+        <TabItem Header="Teachers" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="55">
+            <TabItem.CommandBindings>
+                <CommandBinding Command="ApplicationCommands.Open" CanExecute="TeacherView_CommonCmd_CanExecute" Executed="TeacherView_EditCmd_Executed" />
+                <CommandBinding Command="ApplicationCommands.New" CanExecute="TeacherView_CommonCmd_CanExecute" Executed="TeacherView_NewCmd_Executed" />
+            </TabItem.CommandBindings>
+            <Grid Background="#FFE5E5E5">
+                <DataGrid
+                    ItemsSource="{Binding Path=Teachers.Local, UpdateSourceTrigger=PropertyChanged}"
+                    x:Name="dGrid3"
+                    IsReadOnly="False"
+			        Margin="0,45,0,0"
+			        AutoGenerateColumns="False"
+			        AlternatingRowBackground="LightBlue"
+			        AlternationCount="1"
+			        GridLinesVisibility="All"
+			        CanUserResizeColumns="False" VerticalContentAlignment="Center" CanUserReorderColumns="False" CanUserAddRows="False" CanUserResizeRows="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Name" IsReadOnly="True" Width="*" Binding="{Binding Name}">
+                        </DataGridTextColumn>
+                        <DataGridTemplateColumn Header="Delete" >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Delete"
+								Command="Delete"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Edit" >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Edit"
+								Command="ApplicationCommands.Open" CommandParameter="{Binding}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Button Content="Add student" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="92" Command="ApplicationCommands.New"/>
+                <Button Content="About" Margin="741,20,0,0" VerticalAlignment="Top" Click="AboutBtnClick"/>
+            </Grid>
+        </TabItem>
     </TabControl>
 </Window>
