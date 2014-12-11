@@ -127,7 +127,7 @@
                         </DataGridTemplateColumn>
                     </DataGrid.Columns>
                 </DataGrid>
-                <Button Content="Add student" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="92" Command="ApplicationCommands.New"/>
+                <Button Content="Add teacher" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="92" Command="ApplicationCommands.New"/>
                 <Button Content="About" Margin="741,20,0,0" VerticalAlignment="Top" Click="AboutBtnClick"/>
             </Grid>
         </TabItem>
