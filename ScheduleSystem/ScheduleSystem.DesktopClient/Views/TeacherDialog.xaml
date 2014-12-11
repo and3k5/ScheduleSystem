@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:ViewModel="clr-namespace:ScheduleSystem.DesktopClient.ViewModels"
         Icon="/ScheduleSystem.DesktopClient;component/icon.ico"
-        Title="TeacherDialog" Height="300" Width="300">
+        Title="TeacherDialog" Height="300" Width="300" WindowStartupLocation="CenterScreen">
         <Window.DataContext>
             <ViewModel:TeacherViewModel/>
         </Window.DataContext>
