@@ -7,7 +7,7 @@ namespace ScheduleSystem.DesktopClient.ViewModels
     public class LectureViewModel : Lecture, IDataErrorInfo, INotifyPropertyChanged
     {
         // Creates new lecture object (_lecture) to avoid crashes.
-        private Lecture _lecture;
+        private Lecture _lecture = new Lecture();
         private static bool StringCheck(string txt)
         {
             // Check if string is valid.
