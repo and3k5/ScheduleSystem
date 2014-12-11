@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ScheduleSystem.DesktopClient.ViewModels
 {
@@ -24,7 +20,7 @@ namespace ScheduleSystem.DesktopClient.ViewModels
         }
         public CourseViewModel(Course course)
         {
-            // Bind course viewmodel to course.
+            // Bind course to courseviewmodel.
             _course = course;
         }
 
