@@ -10,7 +10,7 @@ namespace ScheduleSystem.DesktopClient.ViewModels
 {
     public class LectureViewModel : Lecture, IDataErrorInfo, INotifyPropertyChanged
     {
-        private Lecture _lecture = new Lecture();
+        private Lecture _lecture;
         private static bool StringCheck(string txt)
         {
             return (!String.IsNullOrEmpty(txt) && !String.IsNullOrWhiteSpace(txt) && txt.Trim().Length != 0);
