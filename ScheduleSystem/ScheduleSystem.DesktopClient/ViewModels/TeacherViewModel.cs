@@ -5,7 +5,7 @@ namespace ScheduleSystem.DesktopClient.ViewModels
 {
     public class TeacherViewModel : Teacher, IDataErrorInfo, INotifyPropertyChanged
     {
-        // Creates new Student object (_student) to avoid crashes.
+        // Creates new teacher object (_teacher) to avoid crashes.
         private Teacher _teacher;
         
         private static bool StringCheck(string txt)
@@ -16,13 +16,13 @@ namespace ScheduleSystem.DesktopClient.ViewModels
 
         public TeacherViewModel()
         {
-            // Create Student object
+            // Create teacher object
             _teacher = new Teacher();
         }
         
         public TeacherViewModel(Teacher teacher)
         {
-            // Bind student to studentviewmodel.
+            // Bind teacher to teacherviewmodel.
             _teacher = teacher;
         }
 
@@ -30,7 +30,7 @@ namespace ScheduleSystem.DesktopClient.ViewModels
         {
             get
             {
-                // Returns name of _student
+                // Returns name of _teacher
                 return _teacher.Name;
             }
             set
@@ -45,7 +45,7 @@ namespace ScheduleSystem.DesktopClient.ViewModels
         {
             get
             {
-                // Returns Skills of student
+                // Returns Skills of teacher
                 return _teacher.Skills;
             }
             set
@@ -60,7 +60,7 @@ namespace ScheduleSystem.DesktopClient.ViewModels
         {
             get
             {
-                // Returns Email of student
+                // Returns Email of teacher
                 return _teacher.Email;
             }
             set
