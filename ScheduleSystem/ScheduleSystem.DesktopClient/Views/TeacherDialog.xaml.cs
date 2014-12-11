@@ -29,6 +29,7 @@ namespace ScheduleSystem.DesktopClient.Views
             e.CanExecute = IsValid(sender as DependencyObject);
         }
 
+        // Function to check the validations of an element and all it's controls
         // http://stackoverflow.com/a/4650392
         private bool IsValid(DependencyObject obj)
         {
@@ -40,8 +41,10 @@ namespace ScheduleSystem.DesktopClient.Views
 
         private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
         {
+            // Makes the dialog return 'positive'.
+            // Means that changes/properties will be saved.
+            // If dialog doesn't return true, changes will not be comitted
             this.DialogResult = true;
-            //this.Close();
         }
     }
 }
