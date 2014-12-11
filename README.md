@@ -5,3 +5,4 @@ School project..
 
 This will be a calendar system to keep track of courses, lectures, student and teachers.
 
+Development ends 11-12-2014 3:15PM
