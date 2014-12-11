@@ -108,7 +108,7 @@ namespace ScheduleSystem.DesktopClient.Views
             cDialog.DataContext = new LectureViewModel(lecture);
             
             cDialog.ShowDialog();
-
+            
             UpdateItems();
         }
 
@@ -132,6 +132,24 @@ namespace ScheduleSystem.DesktopClient.Views
             dataGrid.Items.Refresh();
             // Update items on the seconds datagrid (the list of lectures)
             dGrid2.Items.Refresh();
+        }
+
+        private void Save_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            // Enables save function when entered information is valid.
+            e.CanExecute = IsValid(sender as DependencyObject);
+        }
+        // http://stackoverflow.com/a/4650392
+        private bool IsValid(DependencyObject obj)
+        {
+            return !Validation.GetHasError(obj) &&
+                LogicalTreeHelper.GetChildren(obj)
+                .OfType<DependencyObject>()
+                .All(IsValid);
+        }
+        private void Close_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            this.DialogResult = true;
         }
     }
 }

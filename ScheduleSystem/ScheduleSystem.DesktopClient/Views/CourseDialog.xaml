@@ -117,5 +117,10 @@
                 <CommandBinding Command="ApplicationCommands.New" CanExecute="CommonCmd_CanExecute" Executed="NewLectureCmd_Executed" />
             </Button.CommandBindings>
         </Button>
+        <Button Content="Button" HorizontalAlignment="Left" Height="24" Margin="336,398,0,0" VerticalAlignment="Top" Width="105" Command="ApplicationCommands.Close">
+            <Button.CommandBindings>
+                <CommandBinding Command="ApplicationCommands.Close" CanExecute="Save_CanExecute" Executed="Close_Executed" />
+            </Button.CommandBindings>
+        </Button>
     </Grid>
 </Window>
