@@ -3,12 +3,26 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="AboutDialog" Height="414" Width="312" Loaded="Window_Loaded">
     <Grid>
-        <Label Content="ScheduleSystem" Margin="10,10,10,0" VerticalAlignment="Top" Height="57" FontSize="30" FontWeight="Bold"/>
+        <Label Name="HeaderLabel" Content="ScheduleSystem" Margin="10,10,10,0" VerticalAlignment="Top" Height="57" FontSize="30" FontWeight="Bold">
+            <Label.Effect>
+                <BlurEffect x:Name="blurEffect" Radius="10"/>
+            </Label.Effect>
+            <Label.Triggers>
+                <EventTrigger RoutedEvent="Label.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard x:Name="CoolEffect">
+                            <DoubleAnimation From="100" To="0" Duration="00:00:02" 
+                               Storyboard.TargetName="blurEffect" 
+                               Storyboard.TargetProperty="Radius"></DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Label.Triggers>
+        </Label>
         <RichTextBox Name="RTBox" Margin="10,72,10,10" TextChanged="RTBox_TextChanged" AcceptsReturn="False" AutoWordSelection="False" AllowDrop="False" IsReadOnly="True" IsUndoEnabled="False" FontSize="14">
             <FlowDocument>
                 <Paragraph Name="first" FontFamily="Calibri" Margin="0,0,0,13.33"/>
             </FlowDocument>
         </RichTextBox>
-
     </Grid>
 </Window>
