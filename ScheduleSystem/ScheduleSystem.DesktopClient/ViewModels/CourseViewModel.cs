@@ -20,7 +20,7 @@ namespace ScheduleSystem.DesktopClient.ViewModels
         }
         public CourseViewModel(Course course)
         {
-            // Bind course viewmodel to course.
+            // Bind course to courseviewmodel.
             _course = course;
         }
 
