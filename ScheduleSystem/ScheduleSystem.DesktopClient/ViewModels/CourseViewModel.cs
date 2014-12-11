@@ -10,17 +10,21 @@ namespace ScheduleSystem.DesktopClient.ViewModels
 {
     public class CourseViewModel : Course, IDataErrorInfo, INotifyPropertyChanged
     {
-        private Course _course;
+        // Creates new Course object (_course) to avoid crashes.
+        private Course _course = new Course();
         private static bool StringCheck(string txt)
         {
+            // Check if string is valid.
             return (!String.IsNullOrEmpty(txt) && !String.IsNullOrWhiteSpace(txt) && txt.Trim().Length != 0);
         }
         public CourseViewModel()
         {
+            // Create Course object
             _course = new Course();
         }
         public CourseViewModel(Course course)
         {
+            // Bind course viewmodel to course.
             _course = course;
         }
 
@@ -28,10 +32,12 @@ namespace ScheduleSystem.DesktopClient.ViewModels
         {
             get
             {
+                // Returns name of course
                 return _course.Name;
             }
             set
             {
+                // Sets name value and notifies "client" of change.
                 _course.Name = value;
                 NotifyPropertyChanged("Name");
             }
@@ -41,10 +47,12 @@ namespace ScheduleSystem.DesktopClient.ViewModels
         {
             get
             {
+                // Returns StartDate of course
                 return _course.StartDate;
             }
             set
             {
+                // Sets StartDate value and notifies "client" of change.
                 _course.StartDate = value;
                 NotifyPropertyChanged("StartDate");
             }
@@ -54,10 +62,12 @@ namespace ScheduleSystem.DesktopClient.ViewModels
         {
             get
             {
+                // Returns EndDate of course
                 return _course.EndDate;
             }
             set
             {
+                // Sets EndDate value and notifies "client" of change.
                 _course.EndDate = value;
                 NotifyPropertyChanged("EndDate");
             }
@@ -67,10 +77,12 @@ namespace ScheduleSystem.DesktopClient.ViewModels
         {
             get
             {
+                // Returns Lectures of course
                 return _course.Lectures;
             }
             set
             {
+                // Sets Lectures value and notifies "client" of change.
                 _course.Lectures = value;
                 NotifyPropertyChanged("Lectures");
             }
@@ -80,17 +92,22 @@ namespace ScheduleSystem.DesktopClient.ViewModels
         {
             get
             {
+                // Returns Students of course
                 return _course.Students;
             }
             set
             {
+                // Sets Students value and notifies "client" of change.
                 _course.Students = value;
                 NotifyPropertyChanged("Students");
             }
         }
         
+        // Raises property changed event.
         public event PropertyChangedEventHandler PropertyChanged;
 
+
+        // Notifies "client" of property change
         protected void NotifyPropertyChanged(string propertyName = "")
         {
             PropertyChangedEventHandler eventHandle = PropertyChanged;
@@ -98,6 +115,10 @@ namespace ScheduleSystem.DesktopClient.ViewModels
             if (eventHandle != null)
                 eventHandle(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        // Making sure fields are not empty
+        // And shows appropriate error message
+        // depending on missing information.
         string IDataErrorInfo.this[string field]
         {
             get
@@ -119,6 +140,7 @@ namespace ScheduleSystem.DesktopClient.ViewModels
             }
         }
 
+        //Handeling data errors.
         string IDataErrorInfo.Error
         {
             get
