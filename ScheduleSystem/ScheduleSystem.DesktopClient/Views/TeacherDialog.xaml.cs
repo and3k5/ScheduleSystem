@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace ScheduleSystem.DesktopClient.Views
 {
@@ -29,6 +20,7 @@ namespace ScheduleSystem.DesktopClient.Views
             e.CanExecute = IsValid(sender as DependencyObject);
         }
 
+        // Function to check the validations of an element and all it's controls
         // http://stackoverflow.com/a/4650392
         private bool IsValid(DependencyObject obj)
         {
@@ -40,8 +32,10 @@ namespace ScheduleSystem.DesktopClient.Views
 
         private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
         {
+            // Makes the dialog return 'positive'.
+            // Means that changes/properties will be saved.
+            // If dialog doesn't return true, changes will not be comitted
             this.DialogResult = true;
-            //this.Close();
         }
     }
 }

@@ -1,24 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using ScheduleSystem.DesktopClient.Views;
 using ScheduleSystem.Data;
-using System.Data.Entity.Core.Objects;
 using System.Data.Entity;
 using ScheduleSystem.DesktopClient.ViewModels;
-using System.ComponentModel;
-using System.Collections.ObjectModel;
 
 namespace ScheduleSystem.DesktopClient
 {
@@ -30,10 +16,13 @@ namespace ScheduleSystem.DesktopClient
         public MainWindow()
         {
             InitializeComponent();
+
             // Create database if it does not exist
             SSCTX.Database.CreateIfNotExists();
 
             // For some reason, we have to load every table manually.
+            // We bind the CollectionChanged event to a function, 
+            // which is explained below.
             SSCTX.Students.Load();
             SSCTX.Students.Local.CollectionChanged += Local_CollectionChanged;
             SSCTX.Teachers.Load();
@@ -46,11 +35,13 @@ namespace ScheduleSystem.DesktopClient
 
         void Local_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
+            // Every time we delete an element from the datagrid,
+            // it won't be removed from the database, unless we do 
+            // a manual SaveChanges on the DbContext
             if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Remove)
             {
                 SSCTX.SaveChanges();
             }
-            Console.WriteLine(e.Action.ToString());
         }
 
         //Easy workaround to access the DataContext as a ScheduleSystemContext, 
