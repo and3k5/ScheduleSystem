@@ -9,19 +9,22 @@ namespace ScheduleSystem.DesktopClient.ViewModels
 {
     public class StudentViewModel : Student, IDataErrorInfo, INotifyPropertyChanged
     {
-        // Define _student as a student object
+        // Creates new Student object (_student) to avoid crashes.
         private Student _student;
         private static bool StringCheck(string txt)
         {
+            // Check if string is valid.
             return (!String.IsNullOrEmpty(txt) && !String.IsNullOrWhiteSpace(txt) && txt.Trim().Length != 0);
         }
         public StudentViewModel()
         {
+            // Create Student object
             _student = new Student();
         }
 
         public StudentViewModel(Student student)
         {
+            // Bind student to studentviewmodel.
             _student = student;
         }
 
@@ -29,10 +32,12 @@ namespace ScheduleSystem.DesktopClient.ViewModels
         {
             get
             {
+                // Returns name of _student
                 return _student.Name;
             }
             set
             {
+                // Sets name value and notifies "client" of change.
                 _student.Name = value;
                 NotifyPropertyChanged("Name");
             }
@@ -42,10 +47,12 @@ namespace ScheduleSystem.DesktopClient.ViewModels
         {
             get
             {
+                // Returns CPR of student
                 return _student.CPR;
             }
             set
             {
+                // Sets CPR value and notifies "client" of change.
                 _student.CPR = value;
                 NotifyPropertyChanged("CPR");
             }
@@ -55,15 +62,18 @@ namespace ScheduleSystem.DesktopClient.ViewModels
         {
             get
             {
+                // Returns Email of student
                 return _student.Email;
             }
             set
             {
+                // Sets Email value and notifies "client" of change.
                 _student.Email = value;
                 NotifyPropertyChanged("Email");
             }
         }
 
+        // Notifies "client" of property change
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void NotifyPropertyChanged(string propertyName = "")
@@ -73,6 +83,10 @@ namespace ScheduleSystem.DesktopClient.ViewModels
             if (eventHandle != null)
                 eventHandle(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        // Making sure fields are not empty
+        // And shows appropriate error message
+        // depending on missing information.
         string IDataErrorInfo.this[string field]
         {
             get
@@ -90,6 +104,7 @@ namespace ScheduleSystem.DesktopClient.ViewModels
             }
         }
 
+        //Handeling data errors.
         string IDataErrorInfo.Error
         {
             get
