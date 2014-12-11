@@ -84,8 +84,14 @@ namespace ScheduleSystem.DesktopClient
             Course course = (Course)e.Parameter;
             CourseDialog cDialog = new CourseDialog();
             cDialog.DataContext = new CourseViewModel(course);
-            cDialog.Closed += CourseView_cDialog_Closed;
-            cDialog.ShowDialog();
+
+            Nullable<bool> result = cDialog.ShowDialog();
+
+            if (result != true)
+            {
+                SSCTX.Entry(course).Reload();
+            }
+            CourseView_UpdateItems();
         }
 
         private void CourseView_NewCmd_Executed(object sender, ExecutedRoutedEventArgs e)
@@ -94,11 +100,17 @@ namespace ScheduleSystem.DesktopClient
             // Course is saved to the databse when windows is closed.
             Course course = new Course();
             
-            SSCTX.Courses.Add(course);
+            
             CourseDialog cDialog = new CourseDialog();
             cDialog.DataContext = new CourseViewModel(course);
-            cDialog.Closed += CourseView_cDialog_Closed;
-            cDialog.ShowDialog();
+            
+            Nullable<bool> result = cDialog.ShowDialog();
+
+            if (result == true)
+            {
+                if (course.Name.Trim().Length!=0) SSCTX.Courses.Add(course);
+            }
+            CourseView_UpdateItems();
         }
         void CourseView_cDialog_Closed(object sender, EventArgs e)
         {
